@@ -278,6 +278,98 @@
         "english"
       ],
       "timestamp": "2026-01-14T19:21:51Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "new3_af_nicole.mp3",
+      "project": "new3",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/new3_af_nicole.mp3",
+      "title": "new3 (af_nicole)",
+      "language": "English",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 26.9,
+      "size_bytes": 430508,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T20:13:39Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "new3_af_nicole.wav",
+      "project": "new3",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/new3_af_nicole.wav",
+      "title": "new3 (af_nicole)",
+      "language": "English",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "384kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 89478.49,
+      "size_bytes": 1288470,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T20:14:04Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "new3_af_nicole58_mix_am_santa50.mp3",
+      "project": "new3",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/new3_af_nicole58_mix_am_santa50.mp3",
+      "title": "new3 (af_nicole(58)+am_santa(50))",
+      "language": "English",
+      "voice_id": "af_nicole(58)+am_santa(50)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 22.13,
+      "size_bytes": 354092,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T20:14:28Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "new3_af_nicole58_mix_am_santa50.wav",
+      "project": "new3",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/new3_af_nicole58_mix_am_santa50.wav",
+      "title": "new3 (af_nicole(58)+am_santa(50))",
+      "language": "English",
+      "voice_id": "af_nicole(58)+am_santa(50)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "384kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 89478.49,
+      "size_bytes": 1059466,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T20:14:48Z"
     }
   ]
 }
