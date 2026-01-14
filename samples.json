@@ -17,7 +17,11 @@
       "sample_rate": "22050 Hz",
       "duration_seconds": 10.5,
       "size_bytes": 204800,
-      "tags": ["female", "adult", "south africa"],
+      "tags": [
+        "female",
+        "adult",
+        "south africa"
+      ],
       "timestamp": "2026-01-15T10:30:00Z"
     },
     {
@@ -34,7 +38,11 @@
       "sample_rate": "22050 Hz",
       "duration_seconds": 11.2,
       "size_bytes": 221184,
-      "tags": ["male", "adult", "germany"],
+      "tags": [
+        "male",
+        "adult",
+        "germany"
+      ],
       "timestamp": "2026-01-15T10:31:00Z"
     },
     {
@@ -51,8 +59,139 @@
       "sample_rate": "22050 Hz",
       "duration_seconds": 10.8,
       "size_bytes": 212992,
-      "tags": ["male", "adult", "united states", "multilingual"],
+      "tags": [
+        "male",
+        "adult",
+        "united states",
+        "multilingual"
+      ],
       "timestamp": "2026-01-15T10:32:00Z"
+    },
+    {
+      "name": "sample_project_af_bella.mp3",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/sample_project_af_bella.mp3",
+      "title": "sample_project (af_bella)",
+      "language": "English",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 3.46,
+      "size_bytes": 55340,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T18:11:48Z"
+    },
+    {
+      "name": "sample_project_af_bella.wav",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/sample_project_af_bella.wav",
+      "title": "sample_project (af_bella)",
+      "language": "English",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "384kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 89478.49,
+      "size_bytes": 162960,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T18:11:51Z"
+    },
+    {
+      "name": "sample_project_af_sky.mp3",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/sample_project_af_sky.mp3",
+      "title": "sample_project (af_sky)",
+      "language": "English",
+      "voice_id": "af_sky",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 3.5,
+      "size_bytes": 56108,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T18:11:55Z"
+    },
+    {
+      "name": "sample_project_af_sky.wav",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/sample_project_af_sky.wav",
+      "title": "sample_project (af_sky)",
+      "language": "English",
+      "voice_id": "af_sky",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "384kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 89478.49,
+      "size_bytes": 165048,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T18:11:59Z"
+    },
+    {
+      "name": "sample_project_af_bella2_mix_af_sky1.mp3",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/sample_project_af_bella2_mix_af_sky1.mp3",
+      "title": "sample_project (af_bella(2)+af_sky(1))",
+      "language": "English",
+      "voice_id": "af_bella(2)+af_sky(1)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 3.38,
+      "size_bytes": 54188,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T18:12:03Z"
+    },
+    {
+      "name": "sample_project_af_bella2_mix_af_sky1.wav",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/sample_project_af_bella2_mix_af_sky1.wav",
+      "title": "sample_project (af_bella(2)+af_sky(1))",
+      "language": "English",
+      "voice_id": "af_bella(2)+af_sky(1)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "384kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 89478.49,
+      "size_bytes": 159798,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-14T18:12:06Z"
     }
   ]
 }
