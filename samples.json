@@ -784,6 +784,98 @@
         "english"
       ],
       "timestamp": "2026-01-15T04:12:30Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "untitled_af_bella.mp3",
+      "project": "untitled",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/untitled_af_bella.mp3",
+      "title": "untitled (af_bella)",
+      "language": "English",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 109.22,
+      "size_bytes": 1747628,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-15T17:11:19Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "untitled_af_bella.wav",
+      "project": "untitled",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/untitled_af_bella.wav",
+      "title": "untitled (af_bella)",
+      "language": "English",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "384kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 89478.49,
+      "size_bytes": 5239300,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-15T17:13:08Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "untitled_am_fenrir81_mix_af_bella51.mp3",
+      "project": "untitled",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/untitled_am_fenrir81_mix_af_bella51.mp3",
+      "title": "untitled (am_fenrir(81)+af_bella(51))",
+      "language": "English",
+      "voice_id": "am_fenrir(81)+af_bella(51)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 106.03,
+      "size_bytes": 1696556,
+      "tags": [
+        "male",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-15T17:15:04Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "untitled_am_fenrir81_mix_af_bella51.wav",
+      "project": "untitled",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/untitled_am_fenrir81_mix_af_bella51.wav",
+      "title": "untitled (am_fenrir(81)+af_bella(51))",
+      "language": "English",
+      "voice_id": "am_fenrir(81)+af_bella(51)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "384kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 89478.49,
+      "size_bytes": 5087000,
+      "tags": [
+        "male",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-15T17:16:47Z"
     }
   ]
 }
