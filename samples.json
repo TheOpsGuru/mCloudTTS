@@ -370,6 +370,52 @@
         "english"
       ],
       "timestamp": "2026-01-14T20:14:48Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "untitled_project_af_nicole.mp3",
+      "project": "untitled_project",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/untitled_project_af_nicole.mp3",
+      "title": "untitled_project (af_nicole)",
+      "language": "English",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 385.32,
+      "size_bytes": 6165164,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-15T02:32:39Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "untitled_project_af_nicole.wav",
+      "project": "untitled_project",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/untitled_project_af_nicole.wav",
+      "title": "untitled_project (af_nicole)",
+      "language": "English",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "384kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 89478.49,
+      "size_bytes": 18491992,
+      "tags": [
+        "female",
+        "adult",
+        "english"
+      ],
+      "timestamp": "2026-01-15T02:39:01Z"
     }
   ]
 }
