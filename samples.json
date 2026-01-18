@@ -1405,6 +1405,29 @@
         "en-us"
       ],
       "timestamp": "2026-01-18T12:35:01Z"
+    },
+    {
+      "jobid": "mCloudTTS-3",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_heart79_mix_af_nova40_mix_am_puck93.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_heart79_mix_af_nova40_mix_am_puck93.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_heart(79)+af_nova(40)+am_puck(93))",
+      "lang_code": "en-us",
+      "voice_id": "af_heart(79)+af_nova(40)+am_puck(93)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 11.71,
+      "size_bytes": 187436,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T12:57:50Z"
     }
   ]
 }
