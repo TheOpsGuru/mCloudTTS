@@ -876,6 +876,29 @@
         "english"
       ],
       "timestamp": "2026-01-15T17:16:47Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "Story_am_echo67_mix_af_heart61.mp3",
+      "project": "Story",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Story_am_echo67_mix_af_heart61.mp3",
+      "title": "Story (am_echo(67)+af_heart(61))",
+      "lang_code": "en-us",
+      "voice_id": "am_echo(67)+af_heart(61)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 78.55,
+      "size_bytes": 1256876,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T07:38:40Z"
     }
   ]
 }
