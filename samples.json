@@ -1428,6 +1428,52 @@
         "en-us"
       ],
       "timestamp": "2026-01-18T12:57:50Z"
+    },
+    {
+      "jobid": "mCloudTTS-2980",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_am_liam97_mix_am_onyx70_mix_af_bella99.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_am_liam97_mix_am_onyx70_mix_af_bella99.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_liam(97)+am_onyx(70)+af_bella(99))",
+      "lang_code": "en-us",
+      "voice_id": "am_liam(97)+am_onyx(70)+af_bella(99)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 11.62,
+      "size_bytes": 185900,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T13:07:58Z"
+    },
+    {
+      "jobid": "mCloudTTS-2980",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_kore56_mix_am_eric98.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_kore56_mix_am_eric98.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_kore(56)+am_eric(98))",
+      "lang_code": "en-us",
+      "voice_id": "af_kore(56)+am_eric(98)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 11.21,
+      "size_bytes": 179372,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T13:08:11Z"
     }
   ]
 }
