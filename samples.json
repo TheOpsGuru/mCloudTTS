@@ -1108,7 +1108,7 @@
       "timestamp": "2026-01-18T11:08:52Z"
     },
     {
-      "jobid": "mCloudTTS-1",
+      "jobid": "mCloudTTS-2",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_river.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_river.mp3",
@@ -1128,7 +1128,53 @@
         "adult",
         "en-us"
       ],
-      "timestamp": "2026-01-18T12:01:40Z"
+      "timestamp": "2026-01-18T12:03:08Z"
+    },
+    {
+      "jobid": "mCloudTTS-2",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_alloy.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_alloy.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_alloy)",
+      "lang_code": "en-us",
+      "voice_id": "af_alloy",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 11.14,
+      "size_bytes": 178220,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T12:03:20Z"
+    },
+    {
+      "jobid": "mCloudTTS-2",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_am_michael.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_am_michael.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_michael)",
+      "lang_code": "en-us",
+      "voice_id": "am_michael",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 13.49,
+      "size_bytes": 215852,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T12:03:35Z"
     }
   ]
 }
