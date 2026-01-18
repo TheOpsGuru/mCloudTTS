@@ -1060,6 +1060,52 @@
         "en-us"
       ],
       "timestamp": "2026-01-18T10:36:32Z"
+    },
+    {
+      "jobid": "PROJECT_NAME-4",
+      "name": "PROJECT_Title_af_heart.mp3",
+      "project": "PROJECT_NAME",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/PROJECT_Title_af_heart.mp3",
+      "title": "PROJECT Title (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 12.48,
+      "size_bytes": 199724,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T11:08:39Z"
+    },
+    {
+      "jobid": "PROJECT_NAME-4",
+      "name": "PROJECT_Title_af_heart41_mix_af_heart67.mp3",
+      "project": "PROJECT_NAME",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/PROJECT_Title_af_heart41_mix_af_heart67.mp3",
+      "title": "PROJECT Title (af_heart(41)+af_heart(67))",
+      "lang_code": "en-us",
+      "voice_id": "af_heart(41)+af_heart(67)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 12.48,
+      "size_bytes": 199724,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T11:08:52Z"
     }
   ]
 }
