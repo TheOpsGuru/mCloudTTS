@@ -2095,6 +2095,52 @@
         "en-gb"
       ],
       "timestamp": "2026-01-18T16:04:24Z"
+    },
+    {
+      "jobid": "mCloudTTS -3966 ",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 12.48,
+      "size_bytes": 199724,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T16:25:30Z"
+    },
+    {
+      "jobid": "mCloudTTS -3966 ",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_heart49_mix_af_aoede57.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_heart49_mix_af_aoede57.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_heart(49)+af_aoede(57))",
+      "lang_code": "en-us",
+      "voice_id": "af_heart(49)+af_aoede(57)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 12.12,
+      "size_bytes": 193964,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T16:25:44Z"
     }
   ]
 }
