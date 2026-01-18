@@ -11,7 +11,7 @@
         "best_for": "Narration, audiobooks, general purpose",
         "grade": "A",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/samples/af_heart_0.wav"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_heart.mp3"
       },
       {
         "name": "Bella",
@@ -21,7 +21,7 @@
         "best_for": "Marketing, announcements, enthusiastic content",
         "grade": "A-",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_bella.mp3"
       },
       {
         "name": "Nicole",
@@ -31,7 +31,7 @@
         "best_for": "Training videos, tutorials, instructional content",
         "grade": "B-",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_nicole.mp3"
       },
       {
         "name": "Aoede",
@@ -41,7 +41,7 @@
         "best_for": "Creative content, storytelling",
         "grade": "C+",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_aoede.mp3"
       },
       {
         "name": "Kore",
@@ -51,7 +51,7 @@
         "best_for": "General purpose, business content",
         "grade": "C+",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_kore.mp3"
       },
       {
         "name": "Sarah",
@@ -61,7 +61,7 @@
         "best_for": "Documentation, formal content, reports",
         "grade": "C+",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_sarah.mp3"
       },
       {
         "name": "Nova",
@@ -71,7 +71,7 @@
         "best_for": "Social media, vlogs, casual content",
         "grade": "C",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_nova.mp3"
       },
       {
         "name": "Sky",
@@ -81,7 +81,7 @@
         "best_for": "Meditation, relaxation, ASMR",
         "grade": "C-",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_sky.mp3"
       },
       {
         "name": "Alloy",
@@ -91,7 +91,7 @@
         "best_for": "Corporate, presentations, business",
         "grade": "C",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_alloy.mp3"
       },
       {
         "name": "Jessica",
@@ -101,7 +101,7 @@
         "best_for": "Customer service, help content",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_jessica.mp3"
       },
       {
         "name": "River",
@@ -111,7 +111,7 @@
         "best_for": "Long-form narration, podcasts",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_river.mp3"
       },
       {
         "name": "Michael",
@@ -121,7 +121,7 @@
         "best_for": "Documentary, serious content, news",
         "grade": "C+",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_michael.mp3"
       },
       {
         "name": "Fenrir",
@@ -131,7 +131,7 @@
         "best_for": "Action content, gaming, intense narration",
         "grade": "C+",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_fenrir.mp3"
       },
       {
         "name": "Puck",
@@ -141,7 +141,7 @@
         "best_for": "Entertainment, comedy",
         "grade": "C+",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_puck.mp3"
       },
       {
         "name": "Echo",
@@ -151,7 +151,7 @@
         "best_for": "Announcements, radio-style content",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_echo.mp3"
       },
       {
         "name": "Eric",
@@ -161,7 +161,7 @@
         "best_for": "Business, training, educational content",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_eric.mp3"
       },
       {
         "name": "Liam",
@@ -171,7 +171,7 @@
         "best_for": "Casual content, social media",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_liam.mp3"
       },
       {
         "name": "Onyx",
@@ -181,7 +181,7 @@
         "best_for": "Premium content, luxury brands",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_onyx.mp3"
       },
       {
         "name": "Adam",
@@ -191,7 +191,7 @@
         "best_for": "General purpose",
         "grade": "F+",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_adam.mp3"
       },
       {
         "name": "Santa",
@@ -201,7 +201,7 @@
         "best_for": "Holiday content",
         "grade": "D-",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_am_santa.mp3"
       }
     ]
   },
@@ -217,7 +217,7 @@
         "best_for": "Business, narration",
         "grade": "B-",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/British_English_bf_emma.mp3"
       },
       {
         "name": "Isabella",
@@ -227,7 +227,7 @@
         "best_for": "Formal content, literature",
         "grade": "C",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/British_English_bf_isabella.mp3"
       },
       {
         "name": "Alice",
@@ -237,7 +237,7 @@
         "best_for": "Narration",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/British_English_bf_alice.mp3"
       },
       {
         "name": "Lily",
@@ -247,7 +247,7 @@
         "best_for": "Children's content",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/British_English_bf_lily.mp3"
       },
       {
         "name": "George",
@@ -257,7 +257,7 @@
         "best_for": "Documentaries, education",
         "grade": "C",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/British_English_bm_george.mp3"
       },
       {
         "name": "Fable",
@@ -267,7 +267,7 @@
         "best_for": "Audiobooks",
         "grade": "C",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/British_English_bm_fable.mp3"
       },
       {
         "name": "Lewis",
@@ -277,7 +277,7 @@
         "best_for": "News, commentary",
         "grade": "D+",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/British_English_bm_lewis.mp3"
       },
       {
         "name": "Daniel",
@@ -287,11 +287,11 @@
         "best_for": "News, commentary",
         "grade": "D",
         "profile_photo_url": null,
-        "sample_voice_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+        "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/British_English_bm_daniel.mp3"
       }
     ]
   },
-  "ja": {
+  "ja-jp": {
     "language": "Japanese",
     "code": "j",
     "voices": [
@@ -347,7 +347,7 @@
       }
     ]
   },
-  "cmn": {
+  "zh-cn": {
     "language": "Mandarin Chinese",
     "code": "z",
     "voices": [
@@ -433,7 +433,7 @@
       }
     ]
   },
-  "hi": {
+  "hi-in": {
     "language": "Hindi",
     "code": "h",
     "voices": [
@@ -479,7 +479,7 @@
       }
     ]
   },
-  "es": {
+  "es-es": {
     "language": "Spanish",
     "code": "e",
     "voices": [
@@ -567,7 +567,7 @@
       }
     ]
   },
-  "it": {
+  "it-it": {
     "language": "Italian",
     "code": "i",
     "voices": [
