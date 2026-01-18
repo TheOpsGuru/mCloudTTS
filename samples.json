@@ -899,6 +899,29 @@
         "en-us"
       ],
       "timestamp": "2026-01-18T07:38:40Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "story_bf_lily36_mix_bf_alice63.mp3",
+      "project": "story",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/story_bf_lily36_mix_bf_alice63.mp3",
+      "title": "story (bf_lily(36)+bf_alice(63))",
+      "lang_code": "en-gb",
+      "voice_id": "bf_lily(36)+bf_alice(63)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United Kingdom",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 54.67,
+      "size_bytes": 874796,
+      "tags": [
+        "female",
+        "adult",
+        "en-gb"
+      ],
+      "timestamp": "2026-01-18T07:57:53Z"
     }
   ]
 }
