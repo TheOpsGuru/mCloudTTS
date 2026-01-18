@@ -2233,6 +2233,29 @@
         "hi-in"
       ],
       "timestamp": "2026-01-18T16:34:08Z"
+    },
+    {
+      "jobid": "mCloudTTS-8400",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_heart44_mix_af_heart50.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_heart44_mix_af_heart50.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_heart(44)+af_heart(50))",
+      "lang_code": "en-us",
+      "voice_id": "af_heart(44)+af_heart(50)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 12.48,
+      "size_bytes": 199724,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T17:01:19Z"
     }
   ]
 }
