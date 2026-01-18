@@ -991,6 +991,75 @@
         "en-us"
       ],
       "timestamp": "2026-01-18T09:57:29Z"
+    },
+    {
+      "jobid": "mt-7777",
+      "name": "Project_title_af_bella.mp3",
+      "project": "ProjID",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_bella.mp3",
+      "title": "Project title (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 3.46,
+      "size_bytes": 55340,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T10:36:24Z"
+    },
+    {
+      "jobid": "mt-7777",
+      "name": "Project_title_af_sky.mp3",
+      "project": "ProjID",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_sky.mp3",
+      "title": "Project title (af_sky)",
+      "lang_code": "en-us",
+      "voice_id": "af_sky",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 3.5,
+      "size_bytes": 56108,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T10:36:28Z"
+    },
+    {
+      "jobid": "mt-7777",
+      "name": "Project_title_af_bella2_mix_af_sky1.mp3",
+      "project": "ProjID",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_bella2_mix_af_sky1.mp3",
+      "title": "Project title (af_bella(2)+af_sky(1))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(2)+af_sky(1)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 3.38,
+      "size_bytes": 54188,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-18T10:36:32Z"
     }
   ]
 }
