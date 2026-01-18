@@ -2141,6 +2141,98 @@
         "en-us"
       ],
       "timestamp": "2026-01-18T16:25:44Z"
+    },
+    {
+      "jobid": "mCloudTTS-9654",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_hf_alpha.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_hf_alpha.mp3",
+      "title": "A Pro Level Text To Speech Tool (hf_alpha)",
+      "lang_code": "hi-in",
+      "voice_id": "hf_alpha",
+      "gender": "Unknown",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "Unknown",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 16.1,
+      "size_bytes": 257708,
+      "tags": [
+        "unknown",
+        "adult",
+        "hi-in"
+      ],
+      "timestamp": "2026-01-18T16:33:13Z"
+    },
+    {
+      "jobid": "mCloudTTS-9654",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_hf_beta.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_hf_beta.mp3",
+      "title": "A Pro Level Text To Speech Tool (hf_beta)",
+      "lang_code": "hi-in",
+      "voice_id": "hf_beta",
+      "gender": "Unknown",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "Unknown",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 14.11,
+      "size_bytes": 225836,
+      "tags": [
+        "unknown",
+        "adult",
+        "hi-in"
+      ],
+      "timestamp": "2026-01-18T16:33:30Z"
+    },
+    {
+      "jobid": "mCloudTTS-9654",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_hm_omega.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_hm_omega.mp3",
+      "title": "A Pro Level Text To Speech Tool (hm_omega)",
+      "lang_code": "hi-in",
+      "voice_id": "hm_omega",
+      "gender": "Unknown",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "Unknown",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 16.61,
+      "size_bytes": 265772,
+      "tags": [
+        "unknown",
+        "adult",
+        "hi-in"
+      ],
+      "timestamp": "2026-01-18T16:33:49Z"
+    },
+    {
+      "jobid": "mCloudTTS-9654",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_hm_psi.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_hm_psi.mp3",
+      "title": "A Pro Level Text To Speech Tool (hm_psi)",
+      "lang_code": "hi-in",
+      "voice_id": "hm_psi",
+      "gender": "Unknown",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "Unknown",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 16.66,
+      "size_bytes": 266540,
+      "tags": [
+        "unknown",
+        "adult",
+        "hi-in"
+      ],
+      "timestamp": "2026-01-18T16:34:08Z"
     }
   ]
 }
