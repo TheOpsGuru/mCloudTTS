@@ -1384,7 +1384,7 @@
       "timestamp": "2026-01-18T12:34:48Z"
     },
     {
-      "jobid": "mCloudTTS-4",
+      "jobid": "mCloudTTS-3941",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_sarah.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_sarah.mp3",
@@ -1397,14 +1397,14 @@
       "region": "United States",
       "bitrate": "128kbps",
       "sample_rate": "24000 Hz",
-      "duration_seconds": 11.88,
-      "size_bytes": 190124,
+      "duration_seconds": 19.42,
+      "size_bytes": 310700,
       "tags": [
         "female",
         "adult",
         "en-us"
       ],
-      "timestamp": "2026-01-18T12:35:01Z"
+      "timestamp": "2026-01-19T06:21:13Z"
     },
     {
       "jobid": "mCloudTTS-3",
@@ -2302,6 +2302,29 @@
         "en-us"
       ],
       "timestamp": "2026-01-19T03:35:21Z"
+    },
+    {
+      "jobid": "mCloudTTS-3941",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_am_puck45_mix_am_echo48.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_am_puck45_mix_am_echo48.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_puck(45)+am_echo(48))",
+      "lang_code": "en-us",
+      "voice_id": "am_puck(45)+am_echo(48)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 18.77,
+      "size_bytes": 300332,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T06:20:49Z"
     }
   ]
 }
