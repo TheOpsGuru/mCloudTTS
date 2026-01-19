@@ -2509,6 +2509,121 @@
         "en-us"
       ],
       "timestamp": "2026-01-19T18:55:28Z"
+    },
+    {
+      "jobid": "Karpenter-1301",
+      "name": "Zero_to_Hero_af_aoede.mp3",
+      "project": "Karpenter",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Zero_to_Hero_af_aoede.mp3",
+      "title": "Zero to Hero (af_aoede)",
+      "lang_code": "en-us",
+      "voice_id": "af_aoede",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 397.54,
+      "size_bytes": 6360620,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T19:25:08Z"
+    },
+    {
+      "jobid": "Karpenter-1301",
+      "name": "Zero_to_Hero_af_nicole.mp3",
+      "project": "Karpenter",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Zero_to_Hero_af_nicole.mp3",
+      "title": "Zero to Hero (af_nicole)",
+      "lang_code": "en-us",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 622.66,
+      "size_bytes": 9962540,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T19:37:10Z"
+    },
+    {
+      "jobid": "Karpenter-1301",
+      "name": "Zero_to_Hero_af_bella.mp3",
+      "project": "Karpenter",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Zero_to_Hero_af_bella.mp3",
+      "title": "Zero to Hero (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 421.66,
+      "size_bytes": 6746540,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T19:45:50Z"
+    },
+    {
+      "jobid": "Karpenter-1301",
+      "name": "Zero_to_Hero_af_heart.mp3",
+      "project": "Karpenter",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Zero_to_Hero_af_heart.mp3",
+      "title": "Zero to Hero (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 408.62,
+      "size_bytes": 6538028,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T19:54:24Z"
+    },
+    {
+      "jobid": "Karpenter-1301",
+      "name": "Zero_to_Hero_af_alloy.mp3",
+      "project": "Karpenter",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Zero_to_Hero_af_alloy.mp3",
+      "title": "Zero to Hero (af_alloy)",
+      "lang_code": "en-us",
+      "voice_id": "af_alloy",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 346.01,
+      "size_bytes": 5536172,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T20:01:27Z"
     }
   ]
 }
