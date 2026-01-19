@@ -2325,6 +2325,29 @@
         "en-us"
       ],
       "timestamp": "2026-01-19T06:20:49Z"
+    },
+    {
+      "jobid": "mCloudTTS-1341",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_sarah26_mix_af_heart49_mix_af_nicole25.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_sarah26_mix_af_heart49_mix_af_nicole25.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_sarah(26)+af_heart(49)+af_nicole(25))",
+      "lang_code": "en-us",
+      "voice_id": "af_sarah(26)+af_heart(49)+af_nicole(25)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 13.3,
+      "size_bytes": 212780,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T16:24:30Z"
     }
   ]
 }
