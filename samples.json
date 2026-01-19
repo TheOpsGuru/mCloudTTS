@@ -2097,7 +2097,7 @@
       "timestamp": "2026-01-18T16:04:24Z"
     },
     {
-      "jobid": "mCloudTTS-2275",
+      "jobid": "mCloudTTS-4200",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
@@ -2117,7 +2117,7 @@
         "adult",
         "en-us"
       ],
-      "timestamp": "2026-01-19T17:13:49Z"
+      "timestamp": "2026-01-19T17:50:21Z"
     },
     {
       "jobid": "mCloudTTS -3966 ",
@@ -2440,6 +2440,52 @@
         "en-us"
       ],
       "timestamp": "2026-01-19T17:14:24Z"
+    },
+    {
+      "jobid": "mCloudTTS-4200",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_alloy34_mix_af_heart33_mix_am_adam33.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_alloy34_mix_af_heart33_mix_am_adam33.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_alloy(34)+af_heart(33)+am_adam(33))",
+      "lang_code": "en-us",
+      "voice_id": "af_alloy(34)+af_heart(33)+am_adam(33)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 11.71,
+      "size_bytes": 187436,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T17:50:33Z"
+    },
+    {
+      "jobid": "mCloudTTS-4200",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_am_michael30_mix_am_fenrir29_mix_am_adam41.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_am_michael30_mix_am_fenrir29_mix_am_adam41.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_michael(30)+am_fenrir(29)+am_adam(41))",
+      "lang_code": "en-us",
+      "voice_id": "am_michael(30)+am_fenrir(29)+am_adam(41)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 12.14,
+      "size_bytes": 194348,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T17:50:45Z"
     }
   ]
 }
