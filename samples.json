@@ -2486,6 +2486,29 @@
         "en-us"
       ],
       "timestamp": "2026-01-19T17:50:45Z"
+    },
+    {
+      "jobid": "mCloudTTS-6710",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_am_onyx43_mix_am_puck57.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_am_onyx43_mix_am_puck57.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_onyx(43)+am_puck(57))",
+      "lang_code": "en-us",
+      "voice_id": "am_onyx(43)+am_puck(57)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 11.64,
+      "size_bytes": 186284,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-19T18:55:28Z"
     }
   ]
 }
