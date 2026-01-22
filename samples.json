@@ -2,6 +2,7 @@
   "project": "mCloudTTS",
   "release": "mTTS",
   "description": "Batch audio files",
+  "retaintion": "30",
   "voices": [
     {
       "jobid": "mt-1213",

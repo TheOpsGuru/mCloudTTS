@@ -10,7 +10,7 @@
         "traits": "Warm, friendly, natural",
         "best_for": "Narration, audiobooks, general purpose",
         "grade": "A",
-        "profile_photo_url": null,
+        "profile_photo_url": "https://raw.githubusercontent.com/TheOpsGuru/mCloudTTS/refs/heads/main/assets/default.png",
         "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_heart.mp3"
       },
       {
@@ -20,7 +20,7 @@
         "traits": "Energetic, dynamic, engaging",
         "best_for": "Marketing, announcements, enthusiastic content",
         "grade": "A-",
-        "profile_photo_url": null,
+        "profile_photo_url": "https://raw.githubusercontent.com/TheOpsGuru/mCloudTTS/refs/heads/main/assets/default.png",
         "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_bella.mp3"
       },
       {
@@ -30,7 +30,7 @@
         "traits": "Clear, professional, articulate",
         "best_for": "Training videos, tutorials, instructional content",
         "grade": "B-",
-        "profile_photo_url": null,
+        "profile_photo_url": "https://raw.githubusercontent.com/TheOpsGuru/mCloudTTS/refs/heads/main/assets/default.png",
         "sample_voice_url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloud_TTS_Studio_af_nicole.mp3"
       },
       {
