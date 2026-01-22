@@ -2809,6 +2809,52 @@
         "en-us"
       ],
       "timestamp": "2026-01-22T16:36:08Z"
+    },
+    {
+      "jobid": "Story-6644",
+      "name": "stonecutter_af_heart.mp3",
+      "project": "Story",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/stonecutter_af_heart.mp3",
+      "title": "stonecutter (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 55.58,
+      "size_bytes": 889388,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T17:03:50Z"
+    },
+    {
+      "jobid": "Story-6644",
+      "name": "stonecutter_am_onyx50_mix_af_river50.mp3",
+      "project": "Story",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/stonecutter_am_onyx50_mix_af_river50.mp3",
+      "title": "stonecutter (am_onyx(50)+af_river(50))",
+      "lang_code": "en-us",
+      "voice_id": "am_onyx(50)+af_river(50)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 48.14,
+      "size_bytes": 770348,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T17:04:45Z"
     }
   ]
 }
