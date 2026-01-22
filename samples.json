@@ -2624,6 +2624,144 @@
         "en-us"
       ],
       "timestamp": "2026-01-19T20:01:27Z"
+    },
+    {
+      "jobid": "Atomic-Habits-9470",
+      "name": "by_James_Clear_af_heart.mp3",
+      "project": "Atomic-Habits",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/by_James_Clear_af_heart.mp3",
+      "title": "by James Clear (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 160.08,
+      "size_bytes": 2561324,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T09:58:09Z"
+    },
+    {
+      "jobid": "Atomic-Habits-9470",
+      "name": "by_James_Clear_af_bella.mp3",
+      "project": "Atomic-Habits",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/by_James_Clear_af_bella.mp3",
+      "title": "by James Clear (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 166.94,
+      "size_bytes": 2671148,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T10:01:22Z"
+    },
+    {
+      "jobid": "Atomic-Habits-9470",
+      "name": "by_James_Clear_af_nicole.mp3",
+      "project": "Atomic-Habits",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/by_James_Clear_af_nicole.mp3",
+      "title": "by James Clear (af_nicole)",
+      "lang_code": "en-us",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 250.01,
+      "size_bytes": 4000172,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T10:06:16Z"
+    },
+    {
+      "jobid": "Atomic-Habits-9470",
+      "name": "by_James_Clear_af_kore.mp3",
+      "project": "Atomic-Habits",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/by_James_Clear_af_kore.mp3",
+      "title": "by James Clear (af_kore)",
+      "lang_code": "en-us",
+      "voice_id": "af_kore",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 162.07,
+      "size_bytes": 2593196,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T10:09:23Z"
+    },
+    {
+      "jobid": "Atomic-Habits-9470",
+      "name": "by_James_Clear_am_onyx.mp3",
+      "project": "Atomic-Habits",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/by_James_Clear_am_onyx.mp3",
+      "title": "by James Clear (am_onyx)",
+      "lang_code": "en-us",
+      "voice_id": "am_onyx",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 137.81,
+      "size_bytes": 2204972,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T10:11:51Z"
+    },
+    {
+      "jobid": "Atomic-Habits-9470",
+      "name": "by_James_Clear_am_onyx59_mix_af_heart41.mp3",
+      "project": "Atomic-Habits",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/by_James_Clear_am_onyx59_mix_af_heart41.mp3",
+      "title": "by James Clear (am_onyx(59)+af_heart(41))",
+      "lang_code": "en-us",
+      "voice_id": "am_onyx(59)+af_heart(41)",
+      "gender": "Male",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 148.22,
+      "size_bytes": 2371628,
+      "tags": [
+        "male",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T10:14:25Z"
     }
   ]
 }
