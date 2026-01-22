@@ -2763,6 +2763,29 @@
         "en-us"
       ],
       "timestamp": "2026-01-22T10:14:25Z"
+    },
+    {
+      "jobid": "mCloudTTS-2032",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_bella34_mix_af_sky33_mix_am_adam33.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_bella34_mix_af_sky33_mix_am_adam33.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_bella(34)+af_sky(33)+am_adam(33))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(34)+af_sky(33)+am_adam(33)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 10.54,
+      "size_bytes": 168620,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-22T15:46:21Z"
     }
   ]
 }
