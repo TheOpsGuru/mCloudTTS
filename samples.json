@@ -2098,7 +2098,7 @@
       "timestamp": "2026-01-18T16:04:24Z"
     },
     {
-      "jobid": "mCloudTTS-5862",
+      "jobid": "mCloudTTS-1710",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
@@ -2118,7 +2118,7 @@
         "adult",
         "en-us"
       ],
-      "timestamp": "2026-01-24T10:43:41Z"
+      "timestamp": "2026-01-24T11:21:58Z"
     },
     {
       "jobid": "mCloudTTS -3966 ",
@@ -2855,6 +2855,29 @@
         "en-us"
       ],
       "timestamp": "2026-01-22T17:04:45Z"
+    },
+    {
+      "jobid": "mCloudTTS-1710",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_jessica70_mix_am_eric30.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_jessica70_mix_am_eric30.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_jessica(70)+am_eric(30))",
+      "lang_code": "en-us",
+      "voice_id": "af_jessica(70)+am_eric(30)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 9.46,
+      "size_bytes": 151340,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-24T11:22:08Z"
     }
   ]
 }
