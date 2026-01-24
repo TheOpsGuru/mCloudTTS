@@ -994,73 +994,34 @@
       "timestamp": "2026-01-18T09:57:29Z"
     },
     {
-      "jobid": "mt-7777",
+      "jobid": "mt-1213",
       "name": "Project_title_af_bella.mp3",
       "project": "ProjID",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_bella.mp3",
       "title": "Project title (af_bella)",
       "lang_code": "en-us",
       "voice_id": "af_bella",
-      "gender": "Female",
-      "style": "neutral",
-      "age_group": "Adult",
-      "region": "United States",
-      "bitrate": "128kbps",
-      "sample_rate": "24000 Hz",
-      "duration_seconds": 3.46,
-      "size_bytes": 55340,
-      "tags": [
-        "female",
-        "adult",
-        "en-us"
-      ],
-      "timestamp": "2026-01-18T10:36:24Z"
+      "timestamp": "2026-01-24T17:06:56Z"
     },
     {
-      "jobid": "mt-7777",
+      "jobid": "mt-1213",
       "name": "Project_title_af_sky.mp3",
       "project": "ProjID",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_sky.mp3",
       "title": "Project title (af_sky)",
       "lang_code": "en-us",
       "voice_id": "af_sky",
-      "gender": "Female",
-      "style": "neutral",
-      "age_group": "Adult",
-      "region": "United States",
-      "bitrate": "128kbps",
-      "sample_rate": "24000 Hz",
-      "duration_seconds": 3.5,
-      "size_bytes": 56108,
-      "tags": [
-        "female",
-        "adult",
-        "en-us"
-      ],
-      "timestamp": "2026-01-18T10:36:28Z"
+      "timestamp": "2026-01-24T17:06:56Z"
     },
     {
-      "jobid": "mt-7777",
+      "jobid": "mt-1213",
       "name": "Project_title_af_bella2_mix_af_sky1.mp3",
       "project": "ProjID",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_bella2_mix_af_sky1.mp3",
       "title": "Project title (af_bella(2)+af_sky(1))",
       "lang_code": "en-us",
       "voice_id": "af_bella(2)+af_sky(1)",
-      "gender": "Female",
-      "style": "neutral",
-      "age_group": "Adult",
-      "region": "United States",
-      "bitrate": "128kbps",
-      "sample_rate": "24000 Hz",
-      "duration_seconds": 3.38,
-      "size_bytes": 54188,
-      "tags": [
-        "female",
-        "adult",
-        "en-us"
-      ],
-      "timestamp": "2026-01-18T10:36:32Z"
+      "timestamp": "2026-01-24T17:07:07Z"
     },
     {
       "jobid": "PROJECT_NAME-4",
@@ -2901,6 +2862,36 @@
         "en-gb"
       ],
       "timestamp": "2026-01-24T12:42:42Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "Project_title_af_bella.wav",
+      "project": "ProjID",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_bella.wav",
+      "title": "Project title (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "timestamp": "2026-01-24T17:06:48Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "Project_title_af_sky.wav",
+      "project": "ProjID",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_sky.wav",
+      "title": "Project title (af_sky)",
+      "lang_code": "en-us",
+      "voice_id": "af_sky",
+      "timestamp": "2026-01-24T17:06:59Z"
+    },
+    {
+      "jobid": "mt-1213",
+      "name": "Project_title_af_bella2_mix_af_sky1.wav",
+      "project": "ProjID",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Project_title_af_bella2_mix_af_sky1.wav",
+      "title": "Project title (af_bella(2)+af_sky(1))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(2)+af_sky(1)",
+      "timestamp": "2026-01-24T17:07:07Z"
     }
   ]
 }
