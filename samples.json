@@ -2878,6 +2878,29 @@
         "en-us"
       ],
       "timestamp": "2026-01-24T11:22:08Z"
+    },
+    {
+      "jobid": "mCloudTTS-7970",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_bf_lily.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_bf_lily.mp3",
+      "title": "A Pro Level Text To Speech Tool (bf_lily)",
+      "lang_code": "en-gb",
+      "voice_id": "bf_lily",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United Kingdom",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 10.44,
+      "size_bytes": 167084,
+      "tags": [
+        "female",
+        "adult",
+        "en-gb"
+      ],
+      "timestamp": "2026-01-24T12:42:42Z"
     }
   ]
 }
