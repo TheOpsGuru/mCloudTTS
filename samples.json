@@ -2873,6 +2873,75 @@
       "lang_code": "en-us",
       "voice_id": "af_nova(50)+af_heart(50)",
       "timestamp": "2026-01-24T17:41:09Z"
+    },
+    {
+      "jobid": "DevOps-2773",
+      "name": "The_Never-Ending_Story_af_heart.mp3",
+      "project": "DevOps",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/The_Never-Ending_Story_af_heart.mp3",
+      "title": "The Never-Ending Story (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 333.26,
+      "size_bytes": 5332268,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-29T12:33:20Z"
+    },
+    {
+      "jobid": "DevOps-2773",
+      "name": "The_Never-Ending_Story_af_nicole.mp3",
+      "project": "DevOps",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/The_Never-Ending_Story_af_nicole.mp3",
+      "title": "The Never-Ending Story (af_nicole)",
+      "lang_code": "en-us",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 512.47,
+      "size_bytes": 8199596,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-29T12:43:01Z"
+    },
+    {
+      "jobid": "DevOps-2773",
+      "name": "The_Never-Ending_Story_af_nicole68_mix_af_bella32.mp3",
+      "project": "DevOps",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/The_Never-Ending_Story_af_nicole68_mix_af_bella32.mp3",
+      "title": "The Never-Ending Story (af_nicole(68)+af_bella(32))",
+      "lang_code": "en-us",
+      "voice_id": "af_nicole(68)+af_bella(32)",
+      "gender": "Female",
+      "style": "neutral",
+      "age_group": "Adult",
+      "region": "United States",
+      "bitrate": "128kbps",
+      "sample_rate": "24000 Hz",
+      "duration_seconds": 442.32,
+      "size_bytes": 7077164,
+      "tags": [
+        "female",
+        "adult",
+        "en-us"
+      ],
+      "timestamp": "2026-01-29T12:51:18Z"
     }
   ]
 }
