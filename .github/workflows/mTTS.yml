@@ -1,4 +1,5 @@
 name: mCloudTTS-Pro (Enhanced)
+run-name: 'mCloudTTS-Pro: ${{ inputs.jobid || github.run_id }}'
 
 on:
   workflow_dispatch:
@@ -158,7 +159,7 @@ jobs:
                   
                   if subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True).stdout.strip():
                       subprocess.run(["git", "add", "samples.json"], check=True)
-                      subprocess.run(["git", "commit", "-m", f"chore: update {job_id} [skip ci]"], check=True)
+                      subprocess.run(["git", "commit", "-m", f"{p_id}: update {job_id} [skip ci]"], check=True)
                       if subprocess.run(["git", "push", "origin", "main"]).returncode == 0:
                           success = True; break
                   else: success = True; break
