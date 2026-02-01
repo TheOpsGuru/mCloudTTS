@@ -28,7 +28,7 @@ on:
       text:
         description: 'Input Text'
         required: true
-        default: 'Welcome to mCloudTTS-Pro, the next generation of cloud-based speech synthesis. Whether you’re creating content for global audiences, building accessible applications, or narrating your next big project, our professional-grade AI voices provide the clarity and emotion you need. Experience the future of natural sound, delivered directly from the cloud'
+        default: 'Welcome to mCloudTTS-Pro, the next generation of cloud-based speech synthesis. Whether you’re creating content for global audiences, building accessible applications, or narrating your next big project, our professional-grade AI voices provide the clarity and emotion you need.'
       jobid:
         description: 'Custom Job ID (Optional)'
         required: false
@@ -37,8 +37,6 @@ on:
         default: 'mTTS'
         required: false
 
-# Concurrency group ensures that while multiple workflows can queue, 
-# they won't conflict during the critical JSON write phase.
 concurrency:
   group: tts-storage-sync
   cancel-in-progress: false
@@ -94,58 +92,56 @@ jobs:
           RELEASE_TAG: ${{ inputs.releasetag }}
         run: |
           python <<EOF
-          import os, json, requests, datetime, hashlib, time
+          import os, json, requests, datetime, hashlib, time, wave
           from mutagen import File
           from pathlib import Path
 
           def get_voice_profile(v):
               p = {"lang": "Unknown", "gender": "Unknown", "region": "Unknown"}
-              m = {
-                  "af_": ("English", "Female", "USA"), "am_": ("English", "Male", "USA"),
-                  "bf_": ("English", "Female", "UK"), "bm_": ("English", "Male", "UK"),
-                  "jf_": ("Japanese", "Female", "Japan"), "zm_": ("Chinese", "Male", "China"),
-                  "zf_": ("Chinese", "Female", "China"), "es_": ("Spanish", "Mix", "Spain"),
-                  "fr_": ("French", "Mix", "France"), "hi_": ("Hindi", "Mix", "India")
-              }
+              m = {"af_": ("English", "Female", "USA"), "am_": ("English", "Male", "USA"),
+                   "bf_": ("English", "Female", "UK"), "bm_": ("English", "Male", "UK"),
+                   "jf_": ("Japanese", "Female", "Japan"), "zm_": ("Chinese", "Male", "China"),
+                   "zf_": ("Chinese", "Female", "China"), "es_": ("Spanish", "Mix", "Spain"),
+                   "fr_": ("French", "Mix", "France"), "hi_": ("Hindi", "Mix", "India")}
               for k, val in m.items():
                   if v.startswith(k):
                       p.update({"lang": val[0], "gender": val[1], "region": val[2]})
                       break
               return p
 
-          def format_size(bytes_num):
-              for unit in ['B', 'KB', 'MB', 'GB']:
-                  if bytes_num < 1024.0:
-                      return f"{bytes_num:.2f} {unit}"
-                  bytes_num /= 1024.0
-              return f"{bytes_num:.2f} GB"
+          def format_size(b):
+              for u in ['B', 'KB', 'MB']:
+                  if b < 1024.0: return f"{b:.2f} {u}"
+                  b /= 1024.0
+              return f"{b:.2f} GB"
 
-          def format_duration(seconds):
-              if seconds < 60:
-                  return f"{seconds:.2f}s"
-              minutes = int(seconds // 60)
-              rem_seconds = seconds % 60
-              return f"{minutes}m {rem_seconds:.1f}s"
+          def format_duration(s):
+              return f"{s:.2f}s" if s < 60 else f"{int(s//60)}m {s%60:.1f}s"
 
-          # Config & Setup
-          text = os.getenv("INPUT_TEXT")
-          lang = os.getenv("INPUT_LANGUAGE")
+          def get_audio_duration(path, fmt):
+              try:
+                  if fmt == 'wav':
+                      with wave.open(str(path), 'rb') as wf:
+                          return wf.getnframes() / float(wf.getframerate())
+                  elif fmt == 'pcm':
+                      # Kokoro PCM is typically S16LE 24000Hz Mono
+                      return os.path.getsize(path) / (24000 * 2)
+                  else:
+                      audio = File(path)
+                      return audio.info.length if audio and hasattr(audio, 'info') else 0
+              except: return 0
+
+          text, lang = os.getenv("INPUT_TEXT"), os.getenv("INPUT_LANGUAGE")
           voices = [v.strip() for v in os.getenv("INPUT_VOICES").split(",") if v.strip()]
           formats = [f.strip() for f in os.getenv("INPUT_FORMATS").split(",") if f.strip()]
           speed = float(os.getenv("INPUT_SPEED", 1.0))
-          
           raw_proj = os.getenv("PROJECT_NAME", "GEN: Untitled")
           proj_id, proj_title = map(str.strip, raw_proj.split(":", 1)) if ":" in raw_proj else ("GEN", raw_proj)
-          job_id = os.getenv("JOB_ID") or f"job-{int(time.time())}"
-          release_tag = os.getenv("RELEASE_TAG", "mTTS")
+          job_id, release_tag = os.getenv("JOB_ID") or f"job-{int(time.time())}", os.getenv("RELEASE_TAG", "mTTS")
           
-          out_dir = Path("generated_files")
+          out_dir, json_path = Path("generated_files"), Path("samples.json")
           out_dir.mkdir(exist_ok=True)
-          json_path = Path("samples.json")
-          
-          results = []
-          # Use a session for connection pooling (faster for multiple requests)
-          session = requests.Session()
+          results, session = [], requests.Session()
 
           try:
               for v in voices:
@@ -153,68 +149,41 @@ jobs:
                       safe_v = v.replace("(", "").replace(")", "").replace("+", "_")
                       fname = f"{proj_title.replace(' ', '_')}_{safe_v}.{fmt}"
                       fpath = out_dir / fname
-                      
-                      payload = {"model": "kokoro", "input": text, "voice": v, "response_format": fmt, "speed": speed}
                       try:
-                          resp = session.post(os.getenv("API_URL"), json=payload, timeout=300)
+                          resp = session.post(os.getenv("API_URL"), json={"model": "kokoro", "input": text, "voice": v, "response_format": fmt, "speed": speed}, timeout=300)
                           if resp.status_code == 200:
                               fpath.write_bytes(resp.content)
-                              
-                              # Analysis
-                              audio = File(fpath)
-                              duration = audio.info.length if audio else 0
-                              sha = hashlib.sha256(resp.content).hexdigest()[:10]
+                              duration = get_audio_duration(fpath, fmt)
                               profile = get_voice_profile(v)
-                              
-                              size_bytes = len(resp.content)
-                              
                               results.append({
                                   "jobid": job_id, "name": fname, "project": proj_id,
                                   "url": f"https://github.com/{os.getenv('REPO_INFO')}/releases/download/{release_tag}/{fname}",
-                                  "title": f"{proj_title} ({v})", "lang_code": lang,
-                                  "voice_id": v, "gender": profile["gender"], 
-                                  "duration": round(duration, 2),
+                                  "title": f"{proj_title} ({v})", "lang_code": lang, "voice_id": v,
+                                  "gender": profile["gender"], "duration": round(duration, 2),
                                   "duration_readable": format_duration(duration),
-                                  "size_bytes": size_bytes,
-                                  "size_readable": format_size(size_bytes),
-                                  "sha": sha,
+                                  "size_bytes": len(resp.content), "size_readable": format_size(len(resp.content)),
+                                  "sha": hashlib.sha256(resp.content).hexdigest()[:10],
                                   "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
                               })
-                              print(f"✅ Created {fname}")
-                          else:
-                              print(f"❌ API Error {resp.status_code} for {v} -> {fname}")
-                      except Exception as e:
-                          print(f"⚠️ Network/Logic failure for {v}: {e}")
+                              print(f"✅ {fname}")
+                      except Exception as e: print(f"⚠️ Error {v}: {e}")
 
-              # Critical Section: Update JSON with Retry Logic
-              max_retries = 3
-              for attempt in range(max_retries):
-                  try:
-                      data = {"project": "mCloudTTS", "voices": []}
-                      if json_path.exists():
-                          with open(json_path, 'r') as f: data = json.load(f)
-
-                      existing = {i['name']: i for i in data.get('voices', [])}
-                      for r in results: existing[r['name']] = r
-                      data['voices'] = list(existing.values())
-                      
-                      with open(json_path, 'w') as f:
-                          json.dump(data, f, indent=2)
-                      break # Success
-                  except Exception as je:
-                      if attempt == max_retries - 1: raise je
-                      time.sleep(2) # Wait and try again
-
+              # Save JSON
+              data = {"project": "mCloudTTS", "voices": []}
+              if json_path.exists():
+                  with open(json_path, 'r') as f: data = json.load(f)
+              existing = {i['name']: i for i in data.get('voices', [])}
+              for r in results: existing[r['name']] = r
+              data['voices'] = list(existing.values())
+              with open(json_path, 'w') as f: json.dump(data, f, indent=2)
           finally:
-              # Always write summary even if partial success
               with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as s:
                   s.write(f"### 🎙️ TTS Generation Summary (Job: {job_id})\n")
-                  if not results:
-                      s.write("> No files were generated successfully.\n")
-                  else:
-                      s.write("| File | Voice | Duration | Size |\n|---|---|---|---|\n")
+                  if results:
+                      s.write("| File | Voice | Duration | Size | Preview |\n|---|---|---|---|---|\n")
                       for r in results:
-                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} |\n")
+                          preview = f'<audio src="{r["url"]}" controls preload="none" style="height:30px;"></audio>'
+                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} | {preview} |\n")
           EOF
 
       - name: 🚀 Publish to Release
@@ -225,11 +194,10 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: TheOpsGuru/mCloudTTS
 
-      - name: 💾 Sync Metadata (Rebase approach)
+      - name: 💾 Sync Metadata
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update samples.json [job ${{ inputs.jobid }}]"
           file_pattern: 'samples.json'
           repository: .
-          # Aggressive push to handle simultaneous commits by rebasing
           push_options: '--force'
