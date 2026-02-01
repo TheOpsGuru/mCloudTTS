@@ -3998,6 +3998,34 @@
       "duration_readable": "12.07s",
       "size_bytes": 193196,
       "timestamp": "2026-02-01T16:03:37Z"
+    },
+    {
+      "jobid": "mCloudTTS-2737",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_am_echo50_am_eric50.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/A_Pro_Level_Text_To_Speech_Tool_am_echo50_am_eric50.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_echo(50)+am_eric(50))",
+      "lang_code": "en-us",
+      "voice_id": "am_echo(50)+am_eric(50)",
+      "gender": "Male",
+      "duration_seconds": 9.7,
+      "duration_readable": "9.7s",
+      "size_bytes": 155180,
+      "timestamp": "2026-02-01T16:55:40Z"
+    },
+    {
+      "jobid": "mCloudTTS-2737",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_aoede.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/A_Pro_Level_Text_To_Speech_Tool_af_aoede.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_aoede)",
+      "lang_code": "en-us",
+      "voice_id": "af_aoede",
+      "gender": "Female",
+      "duration_seconds": 10.46,
+      "duration_readable": "10.46s",
+      "size_bytes": 167468,
+      "timestamp": "2026-02-01T16:55:46Z"
     }
   ]
 }
