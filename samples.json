@@ -2942,6 +2942,62 @@
         "en-us"
       ],
       "timestamp": "2026-01-29T12:51:18Z"
+    },
+    {
+      "jobid": "job-1769930762",
+      "name": "Test_Project_af_bella.mp3",
+      "project": "MT-001",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Test_Project_af_bella.mp3",
+      "title": "Test Project (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "duration": 4.27,
+      "size": 68396,
+      "sha": "79b4db7ac8",
+      "timestamp": "2026-02-01T07:26:05.034508+00:00"
+    },
+    {
+      "jobid": "job-1769930762",
+      "name": "Test_Project_af_bella.wav",
+      "project": "MT-001",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Test_Project_af_bella.wav",
+      "title": "Test Project (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "duration": 0,
+      "size": 202108,
+      "sha": "064c1589a4",
+      "timestamp": "2026-02-01T07:26:07.420974+00:00"
+    },
+    {
+      "jobid": "job-1769930762",
+      "name": "Test_Project_af_sky.mp3",
+      "project": "MT-001",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Test_Project_af_sky.mp3",
+      "title": "Test Project (af_sky)",
+      "lang_code": "en-us",
+      "voice_id": "af_sky",
+      "gender": "Female",
+      "duration": 4.13,
+      "size": 66092,
+      "sha": "5d77eb14ab",
+      "timestamp": "2026-02-01T07:26:10.146436+00:00"
+    },
+    {
+      "jobid": "job-1769930762",
+      "name": "Test_Project_af_sky.wav",
+      "project": "MT-001",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Test_Project_af_sky.wav",
+      "title": "Test Project (af_sky)",
+      "lang_code": "en-us",
+      "voice_id": "af_sky",
+      "gender": "Female",
+      "duration": 0,
+      "size": 194898,
+      "sha": "34bdf8bb72",
+      "timestamp": "2026-02-01T07:26:12.426373+00:00"
     }
   ]
 }
