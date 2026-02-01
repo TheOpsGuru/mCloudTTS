@@ -4054,6 +4054,48 @@
       "duration_readable": "10.18s",
       "size_bytes": 162860,
       "timestamp": "2026-02-01T17:17:38Z"
+    },
+    {
+      "jobid": "mt-9393",
+      "name": "mt-9393_test_af_bella34_af_bella33_af_sarah33.mp3",
+      "project": "mt",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/mt-9393_test_af_bella34_af_bella33_af_sarah33.mp3",
+      "title": "test (af_bella(34)+af_bella(33)+af_sarah(33))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(34)+af_bella(33)+af_sarah(33)",
+      "gender": "Female",
+      "duration_seconds": 10.92,
+      "duration_readable": "10.92s",
+      "size_bytes": 174764,
+      "timestamp": "2026-02-01T17:36:37Z"
+    },
+    {
+      "jobid": "mt-9393",
+      "name": "mt-9393_test_am_onyx.mp3",
+      "project": "mt",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/mt-9393_test_am_onyx.mp3",
+      "title": "test (am_onyx)",
+      "lang_code": "en-us",
+      "voice_id": "am_onyx",
+      "gender": "Male",
+      "duration_seconds": 10.03,
+      "duration_readable": "10.03s",
+      "size_bytes": 160556,
+      "timestamp": "2026-02-01T17:36:43Z"
+    },
+    {
+      "jobid": "mt-9393",
+      "name": "mt-9393_test_af_jessica73_af_river27.mp3",
+      "project": "mt",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/mt-9393_test_af_jessica73_af_river27.mp3",
+      "title": "test (af_jessica(73)+af_river(27))",
+      "lang_code": "en-us",
+      "voice_id": "af_jessica(73)+af_river(27)",
+      "gender": "Female",
+      "duration_seconds": 9.48,
+      "duration_readable": "9.48s",
+      "size_bytes": 151724,
+      "timestamp": "2026-02-01T17:36:49Z"
     }
   ]
 }
