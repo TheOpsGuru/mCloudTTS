@@ -70,7 +70,9 @@ jobs:
           cache: 'pip'
 
       - name: 📦 Install Dependencies
-        run: pip install requests mutagen
+        run: |  
+          echo "[Memory]"; free -h; echo -e "\n[CPU Usage]"; top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"% Usage"}'
+          pip install requests mutagen
 
       - name: 🎙️ Generate & Sync
         env:
@@ -152,13 +154,11 @@ jobs:
               try:
                   subprocess.run(["git", "pull", "--rebase", "origin", "master"], check=True)
                   
-                  # Stable Merge Logic
                   if json_path.exists():
                       with open(json_path, 'r') as f: data = json.load(f)
                   else:
                       data = {"project": "mCloudTTS", "release": "mTTS", "description": "Batch audio files", "voices": []}
                   
-                  # Use a dictionary keyed by 'name' for non-destructive updates
                   voice_map = {v['name']: v for v in data.get('voices', [])}
                   for r in results:
                       voice_map[r['name']] = r
@@ -182,12 +182,6 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as s:
               s.write(f"### 🎙️ TTS Summary (Job: {job_id})\n| File | Voice | Duration | Size |\n|---|---|---|---|\n")
               for r in results: s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {round(r['size_bytes']/1024, 2)} KB |\n")
-              
-              # Minimal addition for Runner Info
-              cpu = subprocess.check_output("nproc", shell=True, text=True).strip()
-              mem = subprocess.check_output("free -h | awk 'NR==2{print $3 \" / \" $2}'", shell=True, text=True).strip()
-              disk = subprocess.check_output("df -h / | awk 'NR==2{print $3 \" / \" $2}'", shell=True, text=True).strip()
-              s.write(f"\n### 🖥️ Runner Specs\n- **CPU:** {cpu} Cores\n- **Memory (Used/Total):** {mem}\n- **Disk (Used/Total):** {disk}\n")
           EOF
 
       - name: 🚀 Publish
