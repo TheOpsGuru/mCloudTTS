@@ -3000,18 +3000,18 @@
       "timestamp": "2026-02-01T07:26:12.426373+00:00"
     },
     {
-      "jobid": "job-1769932887",
+      "jobid": "job-1769933067",
       "name": "Harry_af_bella.pcm",
-      "project": "MT-002",
+      "project": "MT-003",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Harry_af_bella.pcm",
       "title": "Harry (af_bella)",
       "lang_code": "en-us",
       "voice_id": "af_bella",
       "gender": "Female",
       "duration": 0,
-      "size": 1612248,
-      "sha": "5fe437402a",
-      "timestamp": "2026-02-01T08:01:48.445583+00:00"
+      "size": 1612116,
+      "sha": "7c8bae3d29",
+      "timestamp": "2026-02-01T08:05:22.969090+00:00"
     },
     {
       "jobid": "job-1769932887",
@@ -3028,18 +3028,74 @@
       "timestamp": "2026-02-01T08:02:08.188019+00:00"
     },
     {
-      "jobid": "job-1769932887",
+      "jobid": "job-1769933067",
       "name": "Harry_af_bella2_af_heart1.pcm",
-      "project": "MT-002",
+      "project": "MT-003",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Harry_af_bella2_af_heart1.pcm",
       "title": "Harry (af_bella(2)+af_heart(1))",
       "lang_code": "en-us",
       "voice_id": "af_bella(2)+af_heart(1)",
       "gender": "Female",
       "duration": 0,
-      "size": 1599164,
-      "sha": "34a4215845",
-      "timestamp": "2026-02-01T08:02:29.241301+00:00"
+      "size": 1599146,
+      "sha": "96c7392be8",
+      "timestamp": "2026-02-01T08:06:17.391972+00:00"
+    },
+    {
+      "jobid": "job-1769933067",
+      "name": "Harry_af_bella.mp3",
+      "project": "MT-003",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Harry_af_bella.mp3",
+      "title": "Harry (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "duration": 33.65,
+      "size": 538412,
+      "sha": "e042184ba5",
+      "timestamp": "2026-02-01T08:04:48.605055+00:00"
+    },
+    {
+      "jobid": "job-1769933067",
+      "name": "Harry_af_bella.wav",
+      "project": "MT-003",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Harry_af_bella.wav",
+      "title": "Harry (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "duration": 0,
+      "size": 1613232,
+      "sha": "93588ce505",
+      "timestamp": "2026-02-01T08:05:05.817189+00:00"
+    },
+    {
+      "jobid": "job-1769933067",
+      "name": "Harry_af_bella2_af_heart1.mp3",
+      "project": "MT-003",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Harry_af_bella2_af_heart1.mp3",
+      "title": "Harry (af_bella(2)+af_heart(1))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(2)+af_heart(1)",
+      "gender": "Female",
+      "duration": 33.36,
+      "size": 533804,
+      "sha": "f2880a40c4",
+      "timestamp": "2026-02-01T08:05:43.675071+00:00"
+    },
+    {
+      "jobid": "job-1769933067",
+      "name": "Harry_af_bella2_af_heart1.wav",
+      "project": "MT-003",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Harry_af_bella2_af_heart1.wav",
+      "title": "Harry (af_bella(2)+af_heart(1))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(2)+af_heart(1)",
+      "gender": "Female",
+      "duration": 0,
+      "size": 1599198,
+      "sha": "35dbc53082",
+      "timestamp": "2026-02-01T08:06:00.569758+00:00"
     }
   ]
 }
