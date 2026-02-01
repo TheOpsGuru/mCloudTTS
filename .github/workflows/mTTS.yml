@@ -1,4 +1,4 @@
-name: mCloudTTS-Pro (Parallel)
+name: mCloudTTS-Pro (Enhanced)
 
 on:
   workflow_dispatch:
@@ -10,13 +10,13 @@ on:
         type: choice
         options: [en-us, en-gb, ja-jp, zh-cn, es-es, fr-fr, hi-in, it-it, pt-br]
       voices:
-        description: 'Voices (e.g., af_bella, am_adam - will run in parallel)'
+        description: 'Voices (e.g., af_bella,am_adam,af_bella(2)+af_heart(1))'
         required: true
-        default: 'af_bella,af_sky,af_heart'
+        default: 'af_bella,af_sky,af_bella(2)+af_heart(1)'
       response_format:
         description: 'Audio Formats'
         required: true
-        default: 'mp3,wav'
+        default: 'mp3,wav,opus,flac,m4a,pcm'
       speed:
         description: 'Speed (0.5 - 2.0)'
         required: true
@@ -28,44 +28,30 @@ on:
       text:
         description: 'Input Text'
         required: true
-        default: 'Welcome to mCloudTTS-Pro. This text is being processed by multiple parallel workers simultaneously to save time.'
+        default: 'Welcome to mCloudTTS-Pro, the next generation of cloud-based speech synthesis. Whether you’re creating content for global audiences, building accessible applications, or narrating your next big project, our professional-grade AI voices provide the clarity and emotion you need.'
       jobid:
-        description: 'Custom Job ID'
+        description: 'Custom Job ID (Optional)'
         required: false
       releasetag:
         description: 'Release tag'
         default: 'mTTS'
         required: false
 
+# Concurrency group removed to allow multiple parallel runs.
+# Each run now handles its own state and merges metadata independently.
+
 permissions:
   contents: write
 
 jobs:
-  # --- JOB 1: PREPARE MATRIX ---
-  prepare:
-    runs-on: ubuntu-latest
-    outputs:
-      voice_matrix: ${{ steps.set-matrix.outputs.voices }}
-    steps:
-      - id: set-matrix
-        run: |
-          # Convert comma separated string to JSON array for matrix
-          VOICES=$(echo "${{ inputs.voices }}" | jq -R -c 'split(",") | map(trimstr(" "))')
-          echo "voices=$VOICES" >> $GITHUB_OUTPUT
-
-  # --- JOB 2: PARALLEL GENERATION ---
   generate:
-    needs: prepare
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        voice: ${{ fromJson(needs.prepare.outputs.voice_matrix) }}
     
     services:
       kokoro:
         image: ghcr.io/remsky/kokoro-fastapi-cpu:latest
-        ports: ["8880:8880"]
+        ports:
+          - 8880:8880
         options: >-
           --health-cmd "curl -f http://localhost:8880/v1/models || exit 1"
           --health-interval 10s
@@ -73,20 +59,29 @@ jobs:
           --health-retries 10
 
     steps:
+      - name: 📥 Checkout Storage
+        uses: actions/checkout@v4
+        with:
+          repository: TheOpsGuru/mCloudTTS
+          token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          ref: main
+          fetch-depth: 0
+
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: 📦 Install Dependencies
         run: pip install requests mutagen
 
-      - name: 🎙️ Generate Voice Fragment
-        id: gen
+      - name: 🎙️ Run Optimized Generator
+        id: tts_gen
         env:
           INPUT_TEXT: ${{ inputs.text }}
           INPUT_LANGUAGE: ${{ inputs.language }}
-          INPUT_VOICE: ${{ matrix.voice }}
+          INPUT_VOICES: ${{ inputs.voices }}
           INPUT_FORMATS: ${{ inputs.response_format }}
           INPUT_SPEED: ${{ inputs.speed }}
           PROJECT_NAME: ${{ inputs.projectName }}
@@ -96,127 +91,130 @@ jobs:
           RELEASE_TAG: ${{ inputs.releasetag }}
         run: |
           python <<EOF
-          import os, json, requests, datetime, hashlib, time, wave
+          import os, json, requests, datetime, hashlib, time, wave, subprocess
           from mutagen import File
           from pathlib import Path
 
           def get_voice_profile(v):
+              p = {"lang": "Unknown", "gender": "Unknown", "region": "Unknown"}
               m = {"af_": ("English", "Female", "USA"), "am_": ("English", "Male", "USA"),
                    "bf_": ("English", "Female", "UK"), "bm_": ("English", "Male", "UK"),
                    "jf_": ("Japanese", "Female", "Japan"), "zm_": ("Chinese", "Male", "China"),
                    "zf_": ("Chinese", "Female", "China"), "es_": ("Spanish", "Mix", "Spain"),
                    "fr_": ("French", "Mix", "France"), "hi_": ("Hindi", "Mix", "India")}
               for k, val in m.items():
-                  if v.startswith(k): return {"lang": val[0], "gender": val[1], "region": val[2]}
-              return {"lang": "Unknown", "gender": "Unknown", "region": "Unknown"}
+                  if v.startswith(k):
+                      p.update({"lang": val[0], "gender": val[1], "region": val[2]})
+                      break
+              return p
+
+          def format_size(b):
+              for u in ['B', 'KB', 'MB']:
+                  if b < 1024.0: return f"{b:.2f} {u}"
+                  b /= 1024.0
+              return f"{b:.2f} GB"
 
           def format_duration(s):
-              if s < 60: return f"{round(s, 2)}s"
-              return f"{round(s/60, 2)}m"
+              if s <= 0: return "0s"
+              if s < 60:
+                  v = round(s, 2)
+                  return f"{int(v)}s" if v == int(v) else f"{v}s"
+              m = round(s / 60, 2)
+              return f"{int(m)}m" if m == int(m) else f"{m}m"
 
           def get_audio_duration(path, fmt):
               try:
                   if fmt in ['wav', 'pcm']:
                       size = os.path.getsize(path)
-                      return max(0, (size - (44 if fmt == 'wav' else 0)) / 48000)
+                      actual_data_size = size - 44 if fmt == 'wav' else size
+                      return max(0, actual_data_size / 48000)
                   audio = File(path)
-                  return audio.info.length if audio and audio.info else 0
-              except: return 0
+                  if audio and hasattr(audio, 'info') and audio.info:
+                      return audio.info.length
+                  return 0
+              except Exception as e:
+                  print(f"Metadata error for {fmt}: {e}")
+                  return 0
 
-          voice = os.getenv("INPUT_VOICE")
-          formats = [f.strip() for f in os.getenv("INPUT_FORMATS").split(",")]
-          raw_proj = os.getenv("PROJECT_NAME")
+          text, lang = os.getenv("INPUT_TEXT"), os.getenv("INPUT_LANGUAGE")
+          voices = [v.strip() for v in os.getenv("INPUT_VOICES").split(",") if v.strip()]
+          formats = [f.strip() for f in os.getenv("INPUT_FORMATS").split(",") if f.strip()]
+          speed = float(os.getenv("INPUT_SPEED", 1.0))
+          raw_proj = os.getenv("PROJECT_NAME", "GEN: Untitled")
           proj_id, proj_title = map(str.strip, raw_proj.split(":", 1)) if ":" in raw_proj else ("GEN", raw_proj)
+          job_id, release_tag = os.getenv("JOB_ID") or f"job-{int(time.time())}", os.getenv("RELEASE_TAG", "mTTS")
           
-          out_dir = Path("out")
+          out_dir, json_path = Path("generated_files"), Path("samples.json")
           out_dir.mkdir(exist_ok=True)
-          results = []
+          results, session = [], requests.Session()
 
-          with requests.Session() as s:
-              for fmt in formats:
-                  safe_v = voice.replace("(", "").replace(")", "").replace("+", "_")
-                  fname = f"{proj_title.replace(' ', '_')}_{safe_v}.{fmt}"
-                  fpath = out_dir / fname
-                  
-                  payload = {"model": "kokoro", "input": os.getenv("INPUT_TEXT"), "voice": voice, "response_format": fmt, "speed": float(os.getenv("INPUT_SPEED"))}
-                  resp = s.post(os.getenv("API_URL"), json=payload, timeout=300)
-                  if resp.status_code == 200:
-                      fpath.write_bytes(resp.content)
-                      dur = get_audio_duration(fpath, fmt)
-                      profile = get_voice_profile(voice)
-                      results.append({
-                          "name": fname, "project": proj_id, "jobid": os.getenv("JOB_ID"),
-                          "url": f"https://github.com/{os.getenv('REPO_INFO')}/releases/download/{os.getenv('RELEASE_TAG')}/{fname}",
-                          "title": f"{proj_title} ({voice})", "lang_code": os.getenv("INPUT_LANGUAGE"),
-                          "voice_id": voice, "gender": profile["gender"], "duration": round(dur, 2),
-                          "duration_readable": format_duration(dur), "size_bytes": len(resp.content),
-                          "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
-                      })
-          
-          Path("fragment.json").write_text(json.dumps(results))
+          try:
+              for v in voices:
+                  for fmt in formats:
+                      safe_v = v.replace("(", "").replace(")", "").replace("+", "_")
+                      fname = f"{proj_title.replace(' ', '_')}_{safe_v}.{fmt}"
+                      fpath = out_dir / fname
+                      try:
+                          resp = session.post(os.getenv("API_URL"), json={"model": "kokoro", "input": text, "voice": v, "response_format": fmt, "speed": speed}, timeout=300)
+                          if resp.status_code == 200:
+                              fpath.write_bytes(resp.content)
+                              duration = get_audio_duration(fpath, fmt)
+                              profile = get_voice_profile(v)
+                              results.append({
+                                  "jobid": job_id, "name": fname, "project": proj_id,
+                                  "url": f"https://github.com/{os.getenv('REPO_INFO')}/releases/download/{release_tag}/{fname}",
+                                  "title": f"{proj_title} ({v})", "lang_code": lang, "voice_id": v,
+                                  "gender": profile["gender"], "duration": round(duration, 2),
+                                  "duration_readable": format_duration(duration),
+                                  "size_bytes": len(resp.content), "size_readable": format_size(len(resp.content)),
+                                  "sha": hashlib.sha256(resp.content).hexdigest()[:10],
+                                  "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
+                              })
+                              print(f"✅ {fname}")
+                      except Exception as e: print(f"⚠️ Error {v}: {e}")
+
+              # Save JSON with concurrency protection:
+              # We pull latest before saving to reduce collision risk
+              max_retries = 5
+              for i in range(max_retries):
+                  try:
+                      # Fetch latest from remote to ensure we are merging with newest data
+                      subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=True)
+                      
+                      data = {"project": "mCloudTTS", "voices": []}
+                      if json_path.exists():
+                          with open(json_path, 'r') as f: data = json.load(f)
+                      
+                      existing = {i['name']: i for i in data.get('voices', [])}
+                      for r in results: existing[r['name']] = r
+                      data['voices'] = list(existing.values())
+                      
+                      with open(json_path, 'w') as f: json.dump(data, f, indent=2)
+                      break
+                  except Exception as e:
+                      print(f"Retry {i+1} due to git conflict: {e}")
+                      time.sleep(2)
+          finally:
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as s:
+                  s.write(f"### 🎙️ TTS Generation Summary (Job: {job_id})\n")
+                  if results:
+                      s.write("| File | Voice | Duration | Size |\n|---|---|---|---|\n")
+                      for r in results:
+                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} |\n")
           EOF
 
-      - name: 🚀 Upload Assets to Release
+      - name: 🚀 Publish to Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ inputs.releasetag }}
-          files: out/*
+          files: generated_files/*
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: TheOpsGuru/mCloudTTS
 
-      - name: 📤 Upload Fragment
-        uses: actions/upload-artifact@v4
-        with:
-          name: fragment-${{ matrix.voice }}
-          path: fragment.json
-
-  # --- JOB 3: MERGE & SYNC ---
-  finalize:
-    needs: generate
-    runs-on: ubuntu-latest
-    concurrency:
-      group: tts-storage-sync
-    steps:
-      - name: 📥 Checkout Storage
-        uses: actions/checkout@v4
-        with:
-          repository: TheOpsGuru/mCloudTTS
-          token: ${{ secrets.GH_PERSONAL_TOKEN }}
-          ref: main
-
-      - name: 📥 Download all fragments
-        uses: actions/download-artifact@v4
-        with:
-          pattern: fragment-*
-          merge-multiple: true
-
-      - name: 🧩 Consolidate Metadata
-        run: |
-          python <<EOF
-          import os, json, glob
-          from pathlib import Path
-
-          main_file = Path("samples.json")
-          data = {"project": "mCloudTTS", "voices": []}
-          if main_file.exists():
-              with open(main_file, 'r') as f: data = json.load(f)
-
-          existing = {v['name']: v for v in data.get('voices', [])}
-          
-          # Merge fragments
-          for frag_path in glob.glob("fragment.json") + glob.glob("fragment-*.json"):
-              with open(frag_path, 'r') as f:
-                  new_entries = json.load(f)
-                  for entry in new_entries:
-                      existing[entry['name']] = entry
-
-          data['voices'] = list(existing.values())
-          with open(main_file, 'w') as f:
-              json.dump(data, f, indent=2)
-          EOF
-
-      - name: 💾 Commit samples.json
+      - name: 💾 Sync Metadata
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: parallel update samples.json [job ${{ inputs.jobid }}]"
+          commit_message: "chore: update samples.json [job ${{ inputs.jobid }}]"
           file_pattern: 'samples.json'
+          repository: .
+          push_options: '--force'
