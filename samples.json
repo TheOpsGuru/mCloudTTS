@@ -4040,6 +4040,20 @@
       "duration_readable": "12.58s",
       "size_bytes": 201260,
       "timestamp": "2026-02-01T17:10:20Z"
+    },
+    {
+      "jobid": "testing-5037",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_am_puck50_af_jessica50.mp3",
+      "project": "testing",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/A_Pro_Level_Text_To_Speech_Tool_am_puck50_af_jessica50.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_puck(50)+af_jessica(50))",
+      "lang_code": "en-us",
+      "voice_id": "am_puck(50)+af_jessica(50)",
+      "gender": "Male",
+      "duration_seconds": 10.18,
+      "duration_readable": "10.18s",
+      "size_bytes": 162860,
+      "timestamp": "2026-02-01T17:17:38Z"
     }
   ]
 }
