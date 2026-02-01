@@ -3944,7 +3944,7 @@
       "timestamp": "2026-02-01T13:38:56Z"
     },
     {
-      "jobid": "mCloudTTS-6289",
+      "jobid": "mCloudTTS-9201",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_nicole.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_nicole.mp3",
@@ -3955,7 +3955,21 @@
       "duration_seconds": 16.15,
       "duration_readable": "16.15s",
       "size_bytes": 258476,
-      "timestamp": "2026-02-01T14:42:08Z"
+      "timestamp": "2026-02-01T14:42:18Z"
+    },
+    {
+      "jobid": "mCloudTTS-9201",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_jessica34_af_sky33_af_nicole33.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_jessica34_af_sky33_af_nicole33.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_jessica(34)+af_sky(33)+af_nicole(33))",
+      "lang_code": "en-us",
+      "voice_id": "af_jessica(34)+af_sky(33)+af_nicole(33)",
+      "gender": "Female",
+      "duration_seconds": 11.3,
+      "duration_readable": "11.3s",
+      "size_bytes": 180908,
+      "timestamp": "2026-02-01T14:42:24Z"
     }
   ]
 }
