@@ -125,7 +125,7 @@ jobs:
           # Generation
           for v in voices:
               for fmt in formats:
-                  fname = f"{p_title.replace(' ', '_')}_{v.replace('+', '_').replace('(','').replace(')','')}.{fmt}"
+                  fname = f"{job_id}_{p_title.replace(' ', '_')}_{v.replace('+', '_').replace('(','').replace(')','')}.{fmt}"
                   fpath = out_dir / fname
                   try:
                       payload = {"model": "kokoro", "input": os.getenv("INPUT_TEXT"), "voice": v, "response_format": fmt, "speed": float(os.getenv("INPUT_SPEED"))}
