@@ -4096,6 +4096,48 @@
       "duration_readable": "9.48s",
       "size_bytes": 151724,
       "timestamp": "2026-02-01T17:36:49Z"
+    },
+    {
+      "jobid": "mCloudTTS-7574",
+      "name": "mCloudTTS-7574_A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-7574_A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "duration_seconds": 11.59,
+      "duration_readable": "11.59s",
+      "size_bytes": 185516,
+      "timestamp": "2026-02-01T18:13:24Z"
+    },
+    {
+      "jobid": "mCloudTTS-7574",
+      "name": "mCloudTTS-7574_A_Pro_Level_Text_To_Speech_Tool_af_heart34_af_sarah33_af_river33.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-7574_A_Pro_Level_Text_To_Speech_Tool_af_heart34_af_sarah33_af_river33.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_heart(34)+af_sarah(33)+af_river(33))",
+      "lang_code": "en-us",
+      "voice_id": "af_heart(34)+af_sarah(33)+af_river(33)",
+      "gender": "Female",
+      "duration_seconds": 10.97,
+      "duration_readable": "10.97s",
+      "size_bytes": 175532,
+      "timestamp": "2026-02-01T18:13:31Z"
+    },
+    {
+      "jobid": "mCloudTTS-7574",
+      "name": "mCloudTTS-7574_A_Pro_Level_Text_To_Speech_Tool_af_bella0_am_onyx0_af_jessica100.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-7574_A_Pro_Level_Text_To_Speech_Tool_af_bella0_am_onyx0_af_jessica100.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_bella(0)+am_onyx(0)+af_jessica(100))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(0)+am_onyx(0)+af_jessica(100)",
+      "gender": "Female",
+      "duration_seconds": 9.94,
+      "duration_readable": "9.94s",
+      "size_bytes": 159020,
+      "timestamp": "2026-02-01T18:13:37Z"
     }
   ]
 }
