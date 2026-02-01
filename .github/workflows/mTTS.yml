@@ -113,6 +113,20 @@ jobs:
                       break
               return p
 
+          def format_size(bytes_num):
+              for unit in ['B', 'KB', 'MB', 'GB']:
+                  if bytes_num < 1024.0:
+                      return f"{bytes_num:.2f} {unit}"
+                  bytes_num /= 1024.0
+              return f"{bytes_num:.2f} GB"
+
+          def format_duration(seconds):
+              if seconds < 60:
+                  return f"{seconds:.2f}s"
+              minutes = int(seconds // 60)
+              rem_seconds = seconds % 60
+              return f"{minutes}m {rem_seconds:.1f}s"
+
           # Config & Setup
           text = os.getenv("INPUT_TEXT")
           lang = os.getenv("INPUT_LANGUAGE")
@@ -152,22 +166,27 @@ jobs:
                               sha = hashlib.sha256(resp.content).hexdigest()[:10]
                               profile = get_voice_profile(v)
                               
+                              size_bytes = len(resp.content)
+                              
                               results.append({
                                   "jobid": job_id, "name": fname, "project": proj_id,
                                   "url": f"https://github.com/{os.getenv('REPO_INFO')}/releases/download/{release_tag}/{fname}",
                                   "title": f"{proj_title} ({v})", "lang_code": lang,
-                                  "voice_id": v, "gender": profile["gender"], "duration": round(duration, 2),
-                                  "size": len(resp.content), "sha": sha,
+                                  "voice_id": v, "gender": profile["gender"], 
+                                  "duration": round(duration, 2),
+                                  "duration_readable": format_duration(duration),
+                                  "size_bytes": size_bytes,
+                                  "size_readable": format_size(size_bytes),
+                                  "sha": sha,
                                   "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
                               })
                               print(f"✅ Created {fname}")
                           else:
-                              print(f"❌ API Error {resp.status_code} for {v}")
+                              print(f"❌ API Error {resp.status_code} for {v} -> {fname}")
                       except Exception as e:
                           print(f"⚠️ Network/Logic failure for {v}: {e}")
 
               # Critical Section: Update JSON with Retry Logic
-              # This handles cases where samples.json might have changed in another run
               max_retries = 3
               for attempt in range(max_retries):
                   try:
@@ -195,7 +214,7 @@ jobs:
                   else:
                       s.write("| File | Voice | Duration | Size |\n|---|---|---|---|\n")
                       for r in results:
-                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration']}s | {round(r['size']/1024, 1)} KB |\n")
+                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} |\n")
           EOF
 
       - name: 🚀 Publish to Release
