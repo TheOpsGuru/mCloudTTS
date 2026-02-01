@@ -2024,7 +2024,7 @@
       "timestamp": "2026-01-18T16:04:24Z"
     },
     {
-      "jobid": "mCloudTTS-7134",
+      "jobid": "mCloudTTS-6289",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
@@ -2035,7 +2035,7 @@
       "duration_seconds": 10.92,
       "duration_readable": "10.92s",
       "size_bytes": 174764,
-      "timestamp": "2026-02-01T13:38:50Z"
+      "timestamp": "2026-02-01T14:41:51Z"
     },
     {
       "jobid": "mCloudTTS -3966 ",
@@ -2199,7 +2199,7 @@
       "timestamp": "2026-01-19T03:35:10Z"
     },
     {
-      "jobid": "mCloudTTS-7238",
+      "jobid": "mCloudTTS-6289",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_bella.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_bella.mp3",
@@ -2207,19 +2207,10 @@
       "lang_code": "en-us",
       "voice_id": "af_bella",
       "gender": "Female",
-      "style": "neutral",
-      "age_group": "Adult",
-      "region": "United States",
-      "bitrate": "128kbps",
-      "sample_rate": "24000 Hz",
-      "duration_seconds": 11.3,
-      "size_bytes": 180908,
-      "tags": [
-        "female",
-        "adult",
-        "en-us"
-      ],
-      "timestamp": "2026-01-19T03:35:21Z"
+      "duration_seconds": 11.14,
+      "duration_readable": "11.14s",
+      "size_bytes": 178220,
+      "timestamp": "2026-02-01T14:41:58Z"
     },
     {
       "jobid": "mCloudTTS-3941",
@@ -3951,6 +3942,20 @@
       "duration_readable": "10.13s",
       "size_bytes": 162092,
       "timestamp": "2026-02-01T13:38:56Z"
+    },
+    {
+      "jobid": "mCloudTTS-6289",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_nicole.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_nicole.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_nicole)",
+      "lang_code": "en-us",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "duration_seconds": 16.15,
+      "duration_readable": "16.15s",
+      "size_bytes": 258476,
+      "timestamp": "2026-02-01T14:42:08Z"
     }
   ]
 }
