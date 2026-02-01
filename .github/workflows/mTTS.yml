@@ -116,6 +116,7 @@ jobs:
               return f"{b:.2f} GB"
 
           def format_duration(s):
+              if s <= 0: return "0s"
               if s < 60:
                   v = round(s, 2)
                   return f"{int(v)}s" if v == int(v) else f"{v}s"
@@ -124,16 +125,23 @@ jobs:
 
           def get_audio_duration(path, fmt):
               try:
-                  if fmt == 'wav':
-                      with wave.open(str(path), 'rb') as wf:
-                          return wf.getnframes() / float(wf.getframerate())
-                  elif fmt == 'pcm':
-                      # Kokoro PCM is typically S16LE 24000Hz Mono
-                      return os.path.getsize(path) / (24000 * 2)
-                  else:
-                      audio = File(path)
-                      return audio.info.length if audio and hasattr(audio, 'info') else 0
-              except: return 0
+                  # WAV and PCM from Kokoro are 24kHz, 16-bit, Mono
+                  # Calculation: bytes / (sample_rate * bytes_per_sample * channels)
+                  # 24000 * 2 * 1 = 48000 bytes per second
+                  if fmt in ['wav', 'pcm']:
+                      size = os.path.getsize(path)
+                      # Subtract 44 bytes if WAV header exists, though Kokoro WAV is often raw PCM with small header
+                      actual_data_size = size - 44 if fmt == 'wav' else size
+                      return max(0, actual_data_size / 48000)
+                  
+                  # For encoded formats like MP3, FLAC, OPUS
+                  audio = File(path)
+                  if audio and hasattr(audio, 'info') and audio.info:
+                      return audio.info.length
+                  return 0
+              except Exception as e:
+                  print(f"Metadata error for {fmt}: {e}")
+                  return 0
 
           text, lang = os.getenv("INPUT_TEXT"), os.getenv("INPUT_LANGUAGE")
           voices = [v.strip() for v in os.getenv("INPUT_VOICES").split(",") if v.strip()]
