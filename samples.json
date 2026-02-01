@@ -2968,12 +2968,12 @@
       "lang_code": "en-us",
       "voice_id": "af_bella",
       "gender": "Female",
-      "duration": 89478.49,
-      "duration_readable": "1491.31m",
-      "size_bytes": 866436,
-      "size_readable": "846.13 KB",
-      "sha": "d5ac315604",
-      "timestamp": "2026-02-01T09:24:09.164035+00:00"
+      "duration": 18.05,
+      "duration_readable": "18.05s",
+      "size_bytes": 866358,
+      "size_readable": "846.05 KB",
+      "sha": "c7fba3363d",
+      "timestamp": "2026-02-01T09:37:00.921720+00:00"
     },
     {
       "jobid": "mt-7777",
@@ -3284,10 +3284,10 @@
       "gender": "Female",
       "duration": 16.99,
       "duration_readable": "16.99s",
-      "size_bytes": 306025,
-      "size_readable": "298.85 KB",
-      "sha": "570ebd6d03",
-      "timestamp": "2026-02-01T09:24:18.501150+00:00"
+      "size_bytes": 306771,
+      "size_readable": "299.58 KB",
+      "sha": "fdec356208",
+      "timestamp": "2026-02-01T09:37:10.148630+00:00"
     },
     {
       "jobid": "mt-7777",
@@ -3300,10 +3300,10 @@
       "gender": "Female",
       "duration": 0.0,
       "duration_readable": "0s",
-      "size_bytes": 467843,
-      "size_readable": "456.88 KB",
-      "sha": "be3cc09a4a",
-      "timestamp": "2026-02-01T09:24:27.734366+00:00"
+      "size_bytes": 467810,
+      "size_readable": "456.85 KB",
+      "sha": "61c68f43cf",
+      "timestamp": "2026-02-01T09:37:19.198099+00:00"
     },
     {
       "jobid": "mt-7777",
@@ -3316,10 +3316,10 @@
       "gender": "Female",
       "duration": 18.05,
       "duration_readable": "18.05s",
-      "size_bytes": 866356,
+      "size_bytes": 866358,
       "size_readable": "846.05 KB",
-      "sha": "793296da6a",
-      "timestamp": "2026-02-01T09:24:36.977184+00:00"
+      "sha": "0f6d02c4a6",
+      "timestamp": "2026-02-01T09:37:28.333115+00:00"
     },
     {
       "jobid": "mt-7777",
@@ -3394,12 +3394,12 @@
       "lang_code": "en-us",
       "voice_id": "af_bella(2)+af_heart(1)",
       "gender": "Female",
-      "duration": 89478.49,
-      "duration_readable": "1491.31m",
+      "duration": 17.9,
+      "duration_readable": "17.9s",
       "size_bytes": 859346,
       "size_readable": "839.21 KB",
-      "sha": "c4a42d4fe4",
-      "timestamp": "2026-02-01T09:25:41.251376+00:00"
+      "sha": "46fd7d764d",
+      "timestamp": "2026-02-01T09:37:39.287552+00:00"
     },
     {
       "jobid": "mt-7777",
@@ -3412,10 +3412,10 @@
       "gender": "Female",
       "duration": 15.99,
       "duration_readable": "15.99s",
-      "size_bytes": 291492,
-      "size_readable": "284.66 KB",
-      "sha": "a37ba27f1d",
-      "timestamp": "2026-02-01T09:25:50.378430+00:00"
+      "size_bytes": 290839,
+      "size_readable": "284.02 KB",
+      "sha": "0cf2b9d6f4",
+      "timestamp": "2026-02-01T09:37:48.344800+00:00"
     },
     {
       "jobid": "mt-7777",
@@ -3428,10 +3428,10 @@
       "gender": "Female",
       "duration": 0.0,
       "duration_readable": "0s",
-      "size_bytes": 461592,
-      "size_readable": "450.77 KB",
-      "sha": "0db350bd0b",
-      "timestamp": "2026-02-01T09:25:59.344567+00:00"
+      "size_bytes": 461474,
+      "size_readable": "450.66 KB",
+      "sha": "eb1713d3ef",
+      "timestamp": "2026-02-01T09:37:57.375921+00:00"
     },
     {
       "jobid": "mt-7777",
@@ -3444,10 +3444,10 @@
       "gender": "Female",
       "duration": 17.9,
       "duration_readable": "17.9s",
-      "size_bytes": 859268,
+      "size_bytes": 859266,
       "size_readable": "839.13 KB",
-      "sha": "1db1e13395",
-      "timestamp": "2026-02-01T09:26:08.357163+00:00"
+      "sha": "9926530b88",
+      "timestamp": "2026-02-01T09:38:06.463363+00:00"
     }
   ]
 }
