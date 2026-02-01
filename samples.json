@@ -3898,6 +3898,62 @@
       "duration_readable": "5.37s",
       "size_bytes": 257678,
       "timestamp": "2026-02-01T12:28:34.614301+00:00"
+    },
+    {
+      "jobid": "mt-070",
+      "name": "DevOps_Cloud_af_sky.wav",
+      "project": "Test",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/DevOps_Cloud_af_sky.wav",
+      "title": "DevOps Cloud (af_sky)",
+      "lang_code": "en-us",
+      "voice_id": "af_sky",
+      "gender": "Female",
+      "duration": 5.2,
+      "duration_readable": "5.2s",
+      "size_bytes": 249810,
+      "timestamp": "2026-02-01T12:49:17.591158+00:00"
+    },
+    {
+      "jobid": "mt-070",
+      "name": "DevOps_Cloud_af_sky.opus",
+      "project": "Test",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/DevOps_Cloud_af_sky.opus",
+      "title": "DevOps Cloud (af_sky)",
+      "lang_code": "en-us",
+      "voice_id": "af_sky",
+      "gender": "Female",
+      "duration": 3.99,
+      "duration_readable": "3.99s",
+      "size_bytes": 75373,
+      "timestamp": "2026-02-01T12:49:20.386725+00:00"
+    },
+    {
+      "jobid": "mt-070",
+      "name": "DevOps_Cloud_af_bella2_af_heart1.wav",
+      "project": "Test",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/DevOps_Cloud_af_bella2_af_heart1.wav",
+      "title": "DevOps Cloud (af_bella(2)+af_heart(1))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(2)+af_heart(1)",
+      "gender": "Female",
+      "duration": 5.37,
+      "duration_readable": "5.37s",
+      "size_bytes": 257758,
+      "timestamp": "2026-02-01T12:49:23.777515+00:00"
+    },
+    {
+      "jobid": "mt-070",
+      "name": "DevOps_Cloud_af_bella2_af_heart1.opus",
+      "project": "Test",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/DevOps_Cloud_af_bella2_af_heart1.opus",
+      "title": "DevOps Cloud (af_bella(2)+af_heart(1))",
+      "lang_code": "en-us",
+      "voice_id": "af_bella(2)+af_heart(1)",
+      "gender": "Female",
+      "duration": 3.99,
+      "duration_readable": "3.99s",
+      "size_bytes": 73812,
+      "timestamp": "2026-02-01T12:49:26.596542+00:00"
     }
   ]
 }
