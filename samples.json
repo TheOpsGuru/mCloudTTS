@@ -1093,7 +1093,7 @@
       "timestamp": "2026-01-18T12:03:08Z"
     },
     {
-      "jobid": "mCloudTTS-4",
+      "jobid": "mCloudTTS-7134",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_alloy.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_alloy.mp3",
@@ -1101,19 +1101,10 @@
       "lang_code": "en-us",
       "voice_id": "af_alloy",
       "gender": "Female",
-      "style": "neutral",
-      "age_group": "Adult",
-      "region": "United States",
-      "bitrate": "128kbps",
-      "sample_rate": "24000 Hz",
-      "duration_seconds": 11.14,
-      "size_bytes": 178220,
-      "tags": [
-        "female",
-        "adult",
-        "en-us"
-      ],
-      "timestamp": "2026-01-18T12:34:24Z"
+      "duration_seconds": 10.06,
+      "duration_readable": "10.06s",
+      "size_bytes": 160940,
+      "timestamp": "2026-02-01T13:39:02Z"
     },
     {
       "jobid": "mCloudTTS-7119",
@@ -2033,14 +2024,18 @@
       "timestamp": "2026-01-18T16:04:24Z"
     },
     {
-      "jobid": "mCloudTTS-2759",
+      "jobid": "mCloudTTS-7134",
       "name": "A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
       "project": "mCloudTTS",
       "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
       "title": "A Pro Level Text To Speech Tool (af_heart)",
       "lang_code": "en-us",
       "voice_id": "af_heart",
-      "timestamp": "2026-01-24T17:39:01Z"
+      "gender": "Female",
+      "duration_seconds": 10.92,
+      "duration_readable": "10.92s",
+      "size_bytes": 174764,
+      "timestamp": "2026-02-01T13:38:50Z"
     },
     {
       "jobid": "mCloudTTS -3966 ",
@@ -3942,6 +3937,20 @@
       "duration_readable": "3.99s",
       "size_bytes": 73812,
       "timestamp": "2026-02-01T12:49:26.596542+00:00"
+    },
+    {
+      "jobid": "mCloudTTS-7134",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_af_alloy50_am_onyx50.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/A_Pro_Level_Text_To_Speech_Tool_af_alloy50_am_onyx50.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_alloy(50)+am_onyx(50))",
+      "lang_code": "en-us",
+      "voice_id": "af_alloy(50)+am_onyx(50)",
+      "gender": "Female",
+      "duration_seconds": 10.13,
+      "duration_readable": "10.13s",
+      "size_bytes": 162092,
+      "timestamp": "2026-02-01T13:38:56Z"
     }
   ]
 }
