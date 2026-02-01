@@ -136,9 +136,9 @@ jobs:
                               "jobid": job_id, "name": fname, "project": p_id,
                               "url": f"https://github.com/{os.getenv('REPO_INFO')}/releases/download/{os.getenv('RELEASE_TAG')}/{fname}",
                               "title": f"{p_title} ({v})", "lang_code": os.getenv("INPUT_LANGUAGE"),
-                              "voice_id": v, "gender": p["gender"], "duration": round(d, 2),
+                              "voice_id": v, "gender": p["gender"], "duration_seconds": round(d, 2),
                               "duration_readable": fmt_dur(d), "size_bytes": len(resp.content),
-                              "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
+                              "timestamp": datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
                           })
                           print(f"✅ {fname}")
                   except Exception as e: print(f"⚠️ Error {fname}: {e}")
@@ -151,10 +151,19 @@ jobs:
           for i in range(10):
               try:
                   subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=True)
-                  data = json.loads(json_path.read_text()) if json_path.exists() else {"project": "mCloudTTS", "voices": []}
-                  existing = {v['name']: v for v in data.get('voices', [])}
-                  for r in results: existing[r['name']] = r
-                  data['voices'] = list(existing.values())
+                  
+                  # Stable Merge Logic
+                  if json_path.exists():
+                      with open(json_path, 'r') as f: data = json.load(f)
+                  else:
+                      data = {"project": "mCloudTTS", "release": "mTTS", "description": "Batch audio files", "voices": []}
+                  
+                  # Use a dictionary keyed by 'name' for non-destructive updates
+                  voice_map = {v['name']: v for v in data.get('voices', [])}
+                  for r in results:
+                      voice_map[r['name']] = r
+                  
+                  data['voices'] = list(voice_map.values())
                   json_path.write_text(json.dumps(data, indent=2))
                   
                   if subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True).stdout.strip():
@@ -163,7 +172,9 @@ jobs:
                       if subprocess.run(["git", "push", "origin", "main"]).returncode == 0:
                           success = True; break
                   else: success = True; break
-              except: time.sleep(2)
+              except Exception as e:
+                  print(f"Sync error (attempt {i+1}): {e}")
+                  time.sleep(2)
 
           if not success: exit(1)
 
@@ -171,6 +182,12 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as s:
               s.write(f"### 🎙️ TTS Summary (Job: {job_id})\n| File | Voice | Duration | Size |\n|---|---|---|---|\n")
               for r in results: s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {round(r['size_bytes']/1024, 2)} KB |\n")
+              
+              # Minimal addition for Runner Info
+              cpu = subprocess.check_output("nproc", shell=True, text=True).strip()
+              mem = subprocess.check_output("free -h | awk 'NR==2{print $3 \" / \" $2}'", shell=True, text=True).strip()
+              disk = subprocess.check_output("df -h / | awk 'NR==2{print $3 \" / \" $2}'", shell=True, text=True).strip()
+              s.write(f"\n### 🖥️ Runner Specs\n- **CPU:** {cpu} Cores\n- **Memory (Used/Total):** {mem}\n- **Disk (Used/Total):** {disk}\n")
           EOF
 
       - name: 🚀 Publish
