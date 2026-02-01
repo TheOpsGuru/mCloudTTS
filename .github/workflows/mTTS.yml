@@ -28,7 +28,7 @@ on:
       text:
         description: 'Input Text'
         required: true
-        default: 'Hello, this is a test of the enhanced mCloud TTS system.'
+        default: 'Welcome to mCloudTTS-Pro, the next generation of cloud-based speech synthesis. Whether you’re creating content for global audiences, building accessible applications, or narrating your next big project, our professional-grade AI voices provide the clarity and emotion you need. Experience the future of natural sound, delivered directly from the cloud'
       jobid:
         description: 'Custom Job ID (Optional)'
         required: false
@@ -212,9 +212,11 @@ jobs:
                   if not results:
                       s.write("> No files were generated successfully.\n")
                   else:
-                      s.write("| File | Voice | Duration | Size |\n|---|---|---|---|\n")
+                      s.write("| File | Voice | Duration | Size | Preview |\n|---|---|---|---|---|\n")
                       for r in results:
-                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} |\n")
+                          # Use HTML audio tag for a play button/player in the summary
+                          player_html = f'<audio src="{r["url"]}" controls preload="none" style="height: 30px;"></audio>'
+                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} | {player_html} |\n")
           EOF
 
       - name: 🚀 Publish to Release
