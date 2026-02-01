@@ -212,11 +212,9 @@ jobs:
                   if not results:
                       s.write("> No files were generated successfully.\n")
                   else:
-                      s.write("| File | Voice | Duration | Size | Preview |\n|---|---|---|---|---|\n")
+                      s.write("| File | Voice | Duration | Size |\n|---|---|---|---|\n")
                       for r in results:
-                          # Use HTML audio tag for a play button/player in the summary
-                          player_html = f'<audio src="{r["url"]}" controls preload="none" style="height: 30px;"></audio>'
-                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} | {player_html} |\n")
+                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} |\n")
           EOF
 
       - name: 🚀 Publish to Release
