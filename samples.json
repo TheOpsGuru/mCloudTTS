@@ -3970,6 +3970,34 @@
       "duration_readable": "11.3s",
       "size_bytes": 180908,
       "timestamp": "2026-02-01T14:42:24Z"
+    },
+    {
+      "jobid": "mTTS-6025",
+      "name": "Harry_am_liam50_af_jessica50.mp3",
+      "project": "mTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Harry_am_liam50_af_jessica50.mp3",
+      "title": "Harry (am_liam(50)+af_jessica(50))",
+      "lang_code": "en-us",
+      "voice_id": "am_liam(50)+af_jessica(50)",
+      "gender": "Male",
+      "duration_seconds": 9.55,
+      "duration_readable": "9.55s",
+      "size_bytes": 152876,
+      "timestamp": "2026-02-01T16:03:30Z"
+    },
+    {
+      "jobid": "mTTS-6025",
+      "name": "Harry_af_aoede34_af_nicole33_af_aoede33.mp3",
+      "project": "mTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Harry_af_aoede34_af_nicole33_af_aoede33.mp3",
+      "title": "Harry (af_aoede(34)+af_nicole(33)+af_aoede(33))",
+      "lang_code": "en-us",
+      "voice_id": "af_aoede(34)+af_nicole(33)+af_aoede(33)",
+      "gender": "Female",
+      "duration_seconds": 12.07,
+      "duration_readable": "12.07s",
+      "size_bytes": 193196,
+      "timestamp": "2026-02-01T16:03:37Z"
     }
   ]
 }
