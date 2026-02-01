@@ -188,6 +188,10 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ inputs.releasetag }}
+          body: |
+            ### 🛠️ Build Information
+            - **Job ID:** `${{ inputs.jobid || github.run_id }}`
+            - **Generated At:** ${{ github.event.repository.updated_at }}
           files: generated_files/*
           token: ${{ secrets.GH_PERSONAL_TOKEN }}
           repository: TheOpsGuru/mCloudTTS
