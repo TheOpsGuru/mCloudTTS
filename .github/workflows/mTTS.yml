@@ -1,0 +1,62 @@
+name: Generate TTS Audio
+on:
+  workflow_dispatch:
+    inputs:
+      text_prompt:
+        description: 'Text to convert to speech'
+        required: true
+        default: 'Hello world, this is Kokoro running on GitHub Actions.'
+      release_tag:
+        description: 'Tag name for the release (e.g., v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+jobs:
+  build-and-generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y espeak-ng
+
+      - name: Install Python Dependencies
+        run: |
+          pip install kokoro>=0.1.9 soundfile
+          # Note: Kokoro requires a specific version of phonemizer/scipy usually handled by pip
+
+      - name: Generate Audio
+        shell: python
+        run: |
+          import os
+          from kokoro import KModel
+          from pathlib import Path
+          import soundfile as sf
+
+          # Get input from environment
+          text = "${{ github.event.inputs.text_prompt }}"
+          
+          # Initialize model (downloads weights automatically)
+          model = KModel().to('cpu') 
+          
+          # Generate audio (using the default 'af_heart' voice)
+          audio, sample_rate = model.create(text, voice='af_heart', speed=1.0)
+          
+          # Save to file
+          sf.write('output.wav', audio, sample_rate)
+
+      - name: Create Release and Upload Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.release_tag }}
+          files: output.wav
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
