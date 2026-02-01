@@ -116,7 +116,11 @@ jobs:
               return f"{b:.2f} GB"
 
           def format_duration(s):
-              return f"{s:.2f}s" if s < 60 else f"{int(s//60)}m {s%60:.1f}s"
+              if s < 60:
+                  v = round(s, 2)
+                  return f"{int(v)}s" if v == int(v) else f"{v}s"
+              m = round(s / 60, 2)
+              return f"{int(m)}m" if m == int(m) else f"{m}m"
 
           def get_audio_duration(path, fmt):
               try:
@@ -180,10 +184,9 @@ jobs:
               with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as s:
                   s.write(f"### 🎙️ TTS Generation Summary (Job: {job_id})\n")
                   if results:
-                      s.write("| File | Voice | Duration | Size | Preview |\n|---|---|---|---|---|\n")
+                      s.write("| File | Voice | Duration | Size |\n|---|---|---|---|\n")
                       for r in results:
-                          preview = f'<audio src="{r["url"]}" controls preload="none" style="height:30px;"></audio>'
-                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} | {preview} |\n")
+                          s.write(f"| {r['name']} | {r['voice_id']} | {r['duration_readable']} | {r['size_readable']} |\n")
           EOF
 
       - name: 🚀 Publish to Release
