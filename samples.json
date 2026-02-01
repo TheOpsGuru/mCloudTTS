@@ -4026,6 +4026,20 @@
       "duration_readable": "10.46s",
       "size_bytes": 167468,
       "timestamp": "2026-02-01T16:55:46Z"
+    },
+    {
+      "jobid": "test-4914",
+      "name": "A_Pro_Level_Text_To_Speech_Tool_am_onyx50_af_nicole50.mp3",
+      "project": "test",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTSv2/A_Pro_Level_Text_To_Speech_Tool_am_onyx50_af_nicole50.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_onyx(50)+af_nicole(50))",
+      "lang_code": "en-us",
+      "voice_id": "am_onyx(50)+af_nicole(50)",
+      "gender": "Male",
+      "duration_seconds": 12.58,
+      "duration_readable": "12.58s",
+      "size_bytes": 201260,
+      "timestamp": "2026-02-01T17:10:20Z"
     }
   ]
 }
