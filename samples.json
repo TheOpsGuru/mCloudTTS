@@ -4138,6 +4138,48 @@
       "duration_readable": "9.94s",
       "size_bytes": 159020,
       "timestamp": "2026-02-01T18:13:37Z"
+    },
+    {
+      "jobid": "mCloudTTS-9253",
+      "name": "mCloudTTS-9253_A_Pro_Level_Text_To_Speech_Tool_am_eric34_af_nicole33_af_kore33.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-9253_A_Pro_Level_Text_To_Speech_Tool_am_eric34_af_nicole33_af_kore33.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_eric(34)+af_nicole(33)+af_kore(33))",
+      "lang_code": "en-us",
+      "voice_id": "am_eric(34)+af_nicole(33)+af_kore(33)",
+      "gender": "Male",
+      "duration_seconds": 11.74,
+      "duration_readable": "11.74s",
+      "size_bytes": 187820,
+      "timestamp": "2026-02-02T03:07:25Z"
+    },
+    {
+      "jobid": "mCloudTTS-9253",
+      "name": "mCloudTTS-9253_A_Pro_Level_Text_To_Speech_Tool_am_liam.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-9253_A_Pro_Level_Text_To_Speech_Tool_am_liam.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_liam)",
+      "lang_code": "en-us",
+      "voice_id": "am_liam",
+      "gender": "Male",
+      "duration_seconds": 9.67,
+      "duration_readable": "9.67s",
+      "size_bytes": 154796,
+      "timestamp": "2026-02-02T03:07:31Z"
+    },
+    {
+      "jobid": "mCloudTTS-9253",
+      "name": "mCloudTTS-9253_A_Pro_Level_Text_To_Speech_Tool_af_kore34_am_eric33_am_adam33.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-9253_A_Pro_Level_Text_To_Speech_Tool_af_kore34_am_eric33_am_adam33.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_kore(34)+am_eric(33)+am_adam(33))",
+      "lang_code": "en-us",
+      "voice_id": "af_kore(34)+am_eric(33)+am_adam(33)",
+      "gender": "Female",
+      "duration_seconds": 10.22,
+      "duration_readable": "10.22s",
+      "size_bytes": 163628,
+      "timestamp": "2026-02-02T03:07:37Z"
     }
   ]
 }
