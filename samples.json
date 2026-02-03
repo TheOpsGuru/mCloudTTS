@@ -4264,6 +4264,76 @@
       "duration_readable": "1.54m",
       "size_bytes": 1477292,
       "timestamp": "2026-02-02T03:21:56Z"
+    },
+    {
+      "jobid": "intO-3943",
+      "name": "intO-3943_Harry_af_heart.mp3",
+      "project": "intO",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intO-3943_Harry_af_heart.mp3",
+      "title": "Harry (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "duration_seconds": 95.4,
+      "duration_readable": "1.59m",
+      "size_bytes": 1526444,
+      "timestamp": "2026-02-03T04:14:09Z"
+    },
+    {
+      "jobid": "intO-3943",
+      "name": "intO-3943_Harry_af_nicole.mp3",
+      "project": "intO",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intO-3943_Harry_af_nicole.mp3",
+      "title": "Harry (af_nicole)",
+      "lang_code": "en-us",
+      "voice_id": "af_nicole",
+      "gender": "Female",
+      "duration_seconds": 146.02,
+      "duration_readable": "2.43m",
+      "size_bytes": 2336300,
+      "timestamp": "2026-02-03T04:15:40Z"
+    },
+    {
+      "jobid": "intO-3943",
+      "name": "intO-3943_Harry_af_bella.mp3",
+      "project": "intO",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intO-3943_Harry_af_bella.mp3",
+      "title": "Harry (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "duration_seconds": 97.99,
+      "duration_readable": "1.63m",
+      "size_bytes": 1567916,
+      "timestamp": "2026-02-03T04:16:42Z"
+    },
+    {
+      "jobid": "intO-3943",
+      "name": "intO-3943_Harry_af_sarah.mp3",
+      "project": "intO",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intO-3943_Harry_af_sarah.mp3",
+      "title": "Harry (af_sarah)",
+      "lang_code": "en-us",
+      "voice_id": "af_sarah",
+      "gender": "Female",
+      "duration_seconds": 92.11,
+      "duration_readable": "1.54m",
+      "size_bytes": 1473836,
+      "timestamp": "2026-02-03T04:17:39Z"
+    },
+    {
+      "jobid": "intO-3943",
+      "name": "intO-3943_Harry_af_kore.mp3",
+      "project": "intO",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intO-3943_Harry_af_kore.mp3",
+      "title": "Harry (af_kore)",
+      "lang_code": "en-us",
+      "voice_id": "af_kore",
+      "gender": "Female",
+      "duration_seconds": 93.53,
+      "duration_readable": "1.56m",
+      "size_bytes": 1496492,
+      "timestamp": "2026-02-03T04:18:36Z"
     }
   ]
 }
