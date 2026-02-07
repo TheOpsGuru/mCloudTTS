@@ -1,0 +1,184 @@
+name: Edge TTS Generation
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: 'Text to convert to speech (max 5000 chars)'
+        required: true
+        type: string
+      voice:
+        description: 'Edge Voice Name (e.g., en-US-AvaMultilingualNeural)'
+        required: true
+        default: 'en-US-AvaMultilingualNeural'
+        type: string
+      rate:
+        description: 'Speech rate adjustment (-100 to +100, 0 = default)'
+        required: false
+        default: '0'
+        type: number
+      pitch:
+        description: 'Pitch adjustment in semitones (-20 to +20, 0 = default)'
+        required: false
+        default: '0'
+        type: number
+      job_id:
+        description: 'Unique Job ID (alphanumeric/underscore/hyphen only)'
+        required: true
+        type: string
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+
+    steps:
+      - name: Validate Job ID
+        id: validate
+        run: |
+          JOB_ID="${{ github.event.inputs.job_id }}"
+          # Allow only safe characters to prevent path traversal
+          if [[ ! "$JOB_ID" =~ ^[a-zA-Z0-9_-]{1,64}$ ]]; then
+            echo "❌ Invalid job_id: '$JOB_ID'. Must be 1-64 chars (alphanumeric, _, -)"
+            exit 1
+          fi
+          # Trim whitespace
+          SAFE_JOB_ID="${JOB_ID// /_}"
+          echo "safe_job_id=$SAFE_JOB_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Validate Input Text
+        run: |
+          TEXT="${{ github.event.inputs.text }}"
+          if [[ -z "${TEXT// }" ]]; then
+            echo "❌ Text input cannot be empty or whitespace only"
+            exit 1
+          fi
+          if [[ ${#TEXT} -gt 5000 ]]; then
+            echo "❌ Text exceeds 5000 character limit (current: ${#TEXT})"
+            exit 1
+          fi
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: '**/requirements.txt'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install edge-tts==6.1.11  # Pin version for stability
+
+      - name: Prepare TTS Parameters
+        id: params
+        run: |
+          # Rate: edge-tts format examples: "+20%", "-15%", "1.25x"
+          RATE="${{ github.event.inputs.rate }}"
+          if [[ "$RATE" == "0" || -z "$RATE" ]]; then
+            RATE_PARAM=""
+          else
+            # Clamp to Edge TTS acceptable range (-100 to +100)
+            RATE=$(awk "BEGIN {print ($RATE < -100) ? -100 : ($RATE > 100 ? 100 : $RATE)}")
+            [[ "$RATE" == -* ]] && SIGN="" || SIGN="+"
+            RATE_PARAM="--rate ${SIGN}${RATE}%"
+          fi
+          echo "rate_param=$RATE_PARAM" >> "$GITHUB_OUTPUT"
+
+          # Pitch: edge-tts uses semitones (st), NOT Hz. Format: "+2st", "-3st"
+          PITCH="${{ github.event.inputs.pitch }}"
+          if [[ "$PITCH" == "0" || -z "$PITCH" ]]; then
+            PITCH_PARAM=""
+          else
+            # Clamp to reasonable range (-20 to +20 semitones)
+            PITCH=$(awk "BEGIN {print ($PITCH < -20) ? -20 : ($PITCH > 20 ? 20 : $PITCH)}")
+            [[ "$PITCH" == -* ]] && SIGN="" || SIGN="+"
+            PITCH_PARAM="--pitch ${SIGN}${PITCH}st"
+          fi
+          echo "pitch_param=$PITCH_PARAM" >> "$GITHUB_OUTPUT"
+
+          echo "voice=${{ github.event.inputs.voice }}" >> "$GITHUB_OUTPUT"
+          echo "text_preview=$(echo '${{ github.event.inputs.text }}' | cut -c1-50)..." >> "$GITHUB_OUTPUT"
+
+      - name: Generate Audio File
+        id: generate
+        env:
+          EDGE_TTS_TEXT: ${{ github.event.inputs.text }}
+          EDGE_TTS_VOICE: ${{ github.event.inputs.voice }}
+          JOB_ID: ${{ steps.validate.outputs.safe_job_id }}
+        run: |
+          set -euo pipefail
+          
+          OUTPUT_DIR="tts-outputs"
+          mkdir -p "$OUTPUT_DIR"
+          OUTPUT_FILE="$OUTPUT_DIR/output-${JOB_ID}.mp3"
+          
+          echo "🎙️ Generating speech with:"
+          echo "   Voice: $EDGE_TTS_VOICE"
+          echo "   Rate:  ${{ steps.params.outputs.rate_param }}"
+          echo "   Pitch: ${{ steps.params.outputs.pitch_param }}"
+          echo "   Job ID: $JOB_ID"
+          echo "   Text (preview): $(echo "$EDGE_TTS_TEXT" | cut -c1-60)..."
+          
+          # Use process substitution to safely handle special characters/newlines
+          edge-tts \
+            --voice "$EDGE_TTS_VOICE" \
+            ${{ steps.params.outputs.rate_param }} \
+            ${{ steps.params.outputs.pitch_param }} \
+            --text "$EDGE_TTS_TEXT" \
+            --write-media "$OUTPUT_FILE"
+          
+          # Verify output exists and has meaningful size (>1KB)
+          if [[ ! -f "$OUTPUT_FILE" ]] || [[ $(stat -c%s "$OUTPUT_FILE" 2>/dev/null || stat -f%z "$OUTPUT_FILE" 2>/dev/null) -lt 1024 ]]; then
+            echo "❌ Failed to generate valid audio file"
+            exit 1
+          fi
+          
+          FILE_SIZE=$(du -h "$OUTPUT_FILE" | cut -f1)
+          DURATION=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$OUTPUT_FILE" 2>/dev/null || echo "unknown")
+          
+          echo "✅ Audio generated successfully:"
+          echo "   File: $OUTPUT_FILE"
+          echo "   Size: $FILE_SIZE"
+          echo "   Duration: ${DURATION}s"
+          echo "output_path=$OUTPUT_FILE" >> "$GITHUB_OUTPUT"
+          echo "file_size=$FILE_SIZE" >> "$GITHUB_OUTPUT"
+          echo "duration=${DURATION}s" >> "$GITHUB_OUTPUT"
+
+      - name: Upload as Workflow Artifact (Recommended)
+        uses: actions/upload-artifact@v4
+        with:
+          name: tts-audio-${{ steps.validate.outputs.safe_job_id }}
+          path: ${{ steps.generate.outputs.output_path }}
+          retention-days: 7
+
+      - name: Create/Update Release (Optional Persistent Storage)
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: ${{ steps.generate.outputs.output_path }}
+          tag: tts-outputs
+          allowUpdates: true
+          name: TTS Audio Library
+          body: |
+            Latest generated audio files
+            
+            **Job ID:** ${{ steps.validate.outputs.safe_job_id }}
+            **Voice:** ${{ github.event.inputs.voice }}
+            **Duration:** ${{ steps.generate.outputs.duration }}
+            **Size:** ${{ steps.generate.outputs.file_size }}
+            **Generated:** ${{ github.event.created_at }}
+            
+            *Note: This release is auto-updated. For permanent storage, download artifacts within 7 days.*
+          token: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true  # Don't fail workflow if release has issues
+
+      - name: Cleanup
+        if: always()
+        run: |
+          echo "🧹 Cleaning up temporary files..."
+          rm -f edge-tts-*.tmp* 2>/dev/null || true
