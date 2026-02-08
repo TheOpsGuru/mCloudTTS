@@ -39,40 +39,50 @@ jobs:
         image: harry97/opentts:latest
         ports:
           - 8000:8000
-        # options: >-
-        #   --health-cmd "curl -f http://127.0.0.1:8000/api/v1/health || exit 1"
-        #   --health-interval 10s
-        #   --health-timeout 5s
-        #   --health-retries 8
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Wait for TTS Service
-        run: |
-          for i in {1..10}; do
-            if curl -s http://localhost:8000/api/v1/health; then
-              echo "Service is up!"
-              exit 0
-            fi
-            echo "Waiting for TTS service..."
-            sleep 5
-          done
-          exit 1
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
 
-      - name: Generate Audio File
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Generate Audio
+        shell: python
         run: |
-          curl -X POST http://localhost:8000/api/v1/tts \
-            -H "Content-Type: application/json" \
-            -d '{
-              "text": "${{ github.event.inputs.text }}",
+          import requests, time, sys
+
+          BASE_URL = "http://localhost:8000/api/v1"
+          OPTS = {
+              "text": """${{ github.event.inputs.text }}""",
               "voice": "${{ github.event.inputs.voice }}",
               "rate": "${{ github.event.inputs.rate }}",
               "pitch": "${{ github.event.inputs.pitch }}",
               "volume": "100%"
-            }' \
-            --output "${{ github.event.inputs.job_id }}.${{ github.event.inputs.voice }}.mp3"
+          }
+          FILE = f"${{ github.event.inputs.job_id }}.${OPTS['voice']}.mp3"
+
+          # Wait for service (max 60s)
+          for _ in range(12):
+              try:
+                  if requests.get(f"{BASE_URL}/health").status_code == 200: break
+              except: pass
+              time.sleep(5)
+          else: sys.exit("Service failed to start")
+
+          # Request and Save
+          try:
+              res = requests.post(f"{BASE_URL}/tts", json=OPTS)
+              res.raise_for_status()
+              with open(FILE, "wb") as f: f.write(res.content)
+              print(f"Saved: {FILE}")
+          except Exception as e:
+              sys.exit(f"TTS Failed: {e}")
 
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
