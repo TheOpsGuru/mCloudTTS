@@ -1,92 +1,87 @@
-name: Edge TTS Generation
+name: Open TTS Generation
 
 on:
   workflow_dispatch:
     inputs:
       text:
-        description: 'Text to convert to speech (max 2000 chars)'
+        description: 'Text to convert to speech'
         required: true
         type: string
+        default: 'Automated audio generation from Open TTS Workflow'
       voice:
         description: 'Edge Voice Name'
         required: true
-        default: 'en-US-AvaMultilingualNeural'
+        default: 'en-IN-NeerjaNeural'
         type: string
       rate:
-        description: 'Speech rate adjustment (-50 to +50)'
+        description: 'Speech rate (e.g., -10%, +20%)'
         required: false
-        default: '0'
-        type: number
+        default: '0%'
+        type: string
       pitch:
-        description: 'Pitch adjustment in semitones (-10 to +10)'
+        description: 'Pitch (e.g., 0Hz)'
         required: false
-        default: '0'
-        type: number
+        default: '0Hz'
+        type: string
       job_id:
-        description: 'Unique Job ID (alphanumeric, 3-32 chars)'
+        description: 'Unique Job ID for the filename'
         required: true
         type: string
 
 jobs:
-  generate:
+  generate-and-release:
     runs-on: ubuntu-latest
     permissions:
-      actions: write
+      contents: write
 
     services:
-      edge-tts:
-        image: gerardtoko/edge-tts-api:latest
-        ports: ["8080:8080"]
+      opentts:
+        image: harry97/opentts:latest
+        ports:
+          - 8000:8000
         options: >-
-          --health-cmd "curl -f http://localhost:8080/health || exit 1"
+          --health-cmd "curl -f http://localhost:8000/api/v1/health || exit 1"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
 
     steps:
-      - name: Validate inputs
-        id: validate
-        run: |
-          job_id="${{ github.event.inputs.job_id }}"
-          text="${{ github.event.inputs.text }}"
-          
-          [[ "$job_id" =~ ^[a-zA-Z0-9_-]{3,32}$ ]] || { echo "❌ Invalid job_id"; exit 1; }
-          [[ ${#text} -gt 0 && ${#text} -le 2000 ]] || { echo "❌ Invalid text length"; exit 1; }
-          
-          echo "job_id=$job_id" >> "$GITHUB_OUTPUT"
-          echo "text=$text" >> "$GITHUB_OUTPUT"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Generate audio via API
-        id: generate
-        env:
-          TEXT: ${{ steps.validate.outputs.text }}
-          VOICE: ${{ github.event.inputs.voice }}
-          RATE: ${{ github.event.inputs.rate }}
-          PITCH: ${{ github.event.inputs.pitch }}
-          JOB_ID: ${{ steps.validate.outputs.job_id }}
+      - name: Wait for TTS Service
         run: |
-          output="output-${JOB_ID}.mp3"
-          
-          # Build query params
-          params="voice=${VOICE}"
-          [ "$RATE" != "0" ] && params="${params}&rate=$( [ $RATE -ge 0 ] && echo + || : )${RATE}%"
-          [ "$PITCH" != "0" ] && params="${params}&pitch=$( [ $PITCH -ge 0 ] && echo + || : )${PITCH}st"
-          
-          # Call TTS API
-          curl -fsSL "http://localhost:8080/tts?${params}" \
+          for i in {1..10}; do
+            if curl -s http://localhost:8000/api/v1/health; then
+              echo "Service is up!"
+              exit 0
+            fi
+            echo "Waiting for TTS service..."
+            sleep 5
+          done
+          exit 1
+
+      - name: Generate Audio File
+        run: |
+          curl -X POST http://localhost:8000/api/v1/tts \
             -H "Content-Type: application/json" \
-            -d "{\"text\": \"$TEXT\"}" \
-            -o "$output" || { echo "❌ API request failed"; exit 1; }
-          
-          # Verify output
-          [ -s "$output" ] && [ $(stat -c%s "$output" 2>/dev/null || stat -f%z "$output" 2>/dev/null) -gt 2048 ] || { echo "❌ Invalid audio file"; exit 1; }
-          
-          echo "output_path=$output" >> "$GITHUB_OUTPUT"
-          echo "size=$(du -h "$output" | cut -f1)" >> "$GITHUB_OUTPUT"
+            -d '{
+              "text": "${{ github.event.inputs.text }}",
+              "voice": "${{ github.event.inputs.voice }}",
+              "rate": "${{ github.event.inputs.rate }}",
+              "pitch": "${{ github.event.inputs.pitch }}",
+              "volume": "100%"
+            }' \
+            --output "${{ github.event.inputs.job_id }}.mp3"
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: tts-${{ steps.validate.outputs.job_id }}
-          path: ${{ steps.generate.outputs.output_path }}
-          retention-days: 7
+          tag_name: OpenTTS-assets
+          name: "Generated TTS Assets"
+          body: "Automated audio generation from Open TTS Workflow."
+          files: "${{ github.event.inputs.job_id }}.mp3"
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_TOKEN }}
