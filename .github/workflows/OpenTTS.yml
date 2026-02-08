@@ -72,7 +72,7 @@ jobs:
               "pitch": "${{ github.event.inputs.pitch }}",
               "volume": "100%"
             }' \
-            --output "${{ github.event.inputs.job_id }}:${{ github.event.inputs.voice }}:${{ github.event.inputs.rate }}:${{ github.event.inputs.pitch }}.mp3"
+            --output "${{ github.event.inputs.job_id }}.${{ github.event.inputs.voice }}.mp3"
 
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
