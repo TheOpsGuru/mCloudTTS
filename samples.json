@@ -4348,6 +4348,76 @@
       "duration_readable": "1.59m",
       "size_bytes": 1526060,
       "timestamp": "2026-02-04T03:22:57Z"
+    },
+    {
+      "jobid": "intro-5654",
+      "name": "intro-5654_Harry_The_devops_af_heart.mp3",
+      "project": "intro",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intro-5654_Harry_The_devops_af_heart.mp3",
+      "title": "Harry The devops (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "duration_seconds": 68.45,
+      "duration_readable": "1.14m",
+      "size_bytes": 1095212,
+      "timestamp": "2026-02-19T14:19:31Z"
+    },
+    {
+      "jobid": "intro-5654",
+      "name": "intro-5654_Harry_The_devops_af_heart50_am_fenrir50.mp3",
+      "project": "intro",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intro-5654_Harry_The_devops_af_heart50_am_fenrir50.mp3",
+      "title": "Harry The devops (af_heart(50)+am_fenrir(50))",
+      "lang_code": "en-us",
+      "voice_id": "af_heart(50)+am_fenrir(50)",
+      "gender": "Female",
+      "duration_seconds": 66.19,
+      "duration_readable": "1.1m",
+      "size_bytes": 1059116,
+      "timestamp": "2026-02-19T14:20:15Z"
+    },
+    {
+      "jobid": "intro-5654",
+      "name": "intro-5654_Harry_The_devops_am_fenrir.mp3",
+      "project": "intro",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intro-5654_Harry_The_devops_am_fenrir.mp3",
+      "title": "Harry The devops (am_fenrir)",
+      "lang_code": "en-us",
+      "voice_id": "am_fenrir",
+      "gender": "Male",
+      "duration_seconds": 64.51,
+      "duration_readable": "1.08m",
+      "size_bytes": 1032236,
+      "timestamp": "2026-02-19T14:20:58Z"
+    },
+    {
+      "jobid": "intro-5654",
+      "name": "intro-5654_Harry_The_devops_af_bella.mp3",
+      "project": "intro",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intro-5654_Harry_The_devops_af_bella.mp3",
+      "title": "Harry The devops (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "duration_seconds": 69.74,
+      "duration_readable": "1.16m",
+      "size_bytes": 1115948,
+      "timestamp": "2026-02-19T14:21:45Z"
+    },
+    {
+      "jobid": "intro-5654",
+      "name": "intro-5654_Harry_The_devops_af_kore.mp3",
+      "project": "intro",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/intro-5654_Harry_The_devops_af_kore.mp3",
+      "title": "Harry The devops (af_kore)",
+      "lang_code": "en-us",
+      "voice_id": "af_kore",
+      "gender": "Female",
+      "duration_seconds": 64.34,
+      "duration_readable": "1.07m",
+      "size_bytes": 1029548,
+      "timestamp": "2026-02-19T14:22:28Z"
     }
   ]
 }
