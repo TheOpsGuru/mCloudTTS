@@ -4418,6 +4418,20 @@
       "duration_readable": "1.07m",
       "size_bytes": 1029548,
       "timestamp": "2026-02-19T14:22:28Z"
+    },
+    {
+      "jobid": "mCloudTTS-6989",
+      "name": "mCloudTTS-6989_A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-6989_A_Pro_Level_Text_To_Speech_Tool_af_heart.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_heart)",
+      "lang_code": "en-us",
+      "voice_id": "af_heart",
+      "gender": "Female",
+      "duration_seconds": 10.92,
+      "duration_readable": "10.92s",
+      "size_bytes": 174764,
+      "timestamp": "2026-03-21T03:44:16Z"
     }
   ]
 }
