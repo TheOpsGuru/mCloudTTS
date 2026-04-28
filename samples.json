@@ -4446,6 +4446,48 @@
       "duration_readable": "5.23m",
       "size_bytes": 5025452,
       "timestamp": "2026-04-28T03:24:52Z"
+    },
+    {
+      "jobid": "Audiobook-9827",
+      "name": "Audiobook-9827_Storyline_hm_omega.mp3",
+      "project": "Audiobook",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Audiobook-9827_Storyline_hm_omega.mp3",
+      "title": "Storyline (hm_omega)",
+      "lang_code": "hi-in",
+      "voice_id": "hm_omega",
+      "gender": "Unknown",
+      "duration_seconds": 314.11,
+      "duration_readable": "5.24m",
+      "size_bytes": 5025836,
+      "timestamp": "2026-04-28T03:37:26Z"
+    },
+    {
+      "jobid": "Audiobook-9827",
+      "name": "Audiobook-9827_Storyline_hm_omega50_hf_alpha50.mp3",
+      "project": "Audiobook",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Audiobook-9827_Storyline_hm_omega50_hf_alpha50.mp3",
+      "title": "Storyline (hm_omega(50)+hf_alpha(50))",
+      "lang_code": "hi-in",
+      "voice_id": "hm_omega(50)+hf_alpha(50)",
+      "gender": "Unknown",
+      "duration_seconds": 307.27,
+      "duration_readable": "5.12m",
+      "size_bytes": 4916396,
+      "timestamp": "2026-04-28T03:40:42Z"
+    },
+    {
+      "jobid": "Audiobook-9827",
+      "name": "Audiobook-9827_Storyline_hm_psi.mp3",
+      "project": "Audiobook",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Audiobook-9827_Storyline_hm_psi.mp3",
+      "title": "Storyline (hm_psi)",
+      "lang_code": "hi-in",
+      "voice_id": "hm_psi",
+      "gender": "Unknown",
+      "duration_seconds": 318.22,
+      "duration_readable": "5.3m",
+      "size_bytes": 5091500,
+      "timestamp": "2026-04-28T03:43:58Z"
     }
   ]
 }
