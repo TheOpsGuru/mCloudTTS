@@ -4432,6 +4432,20 @@
       "duration_readable": "10.92s",
       "size_bytes": 174764,
       "timestamp": "2026-03-21T03:44:16Z"
+    },
+    {
+      "jobid": "Audiobook-3535",
+      "name": "Audiobook-3535_Storyline_hm_omega.mp3",
+      "project": "Audiobook",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/Audiobook-3535_Storyline_hm_omega.mp3",
+      "title": "Storyline (hm_omega)",
+      "lang_code": "hi-in",
+      "voice_id": "hm_omega",
+      "gender": "Unknown",
+      "duration_seconds": 314.09,
+      "duration_readable": "5.23m",
+      "size_bytes": 5025452,
+      "timestamp": "2026-04-28T03:24:52Z"
     }
   ]
 }
