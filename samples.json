@@ -4488,6 +4488,20 @@
       "duration_readable": "5.3m",
       "size_bytes": 5091500,
       "timestamp": "2026-04-28T03:43:58Z"
+    },
+    {
+      "jobid": "mCloudTTS-8195",
+      "name": "mCloudTTS-8195_A_Pro_Level_Text_To_Speech_Tool_af_bella.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-8195_A_Pro_Level_Text_To_Speech_Tool_af_bella.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_bella)",
+      "lang_code": "en-us",
+      "voice_id": "af_bella",
+      "gender": "Female",
+      "duration_seconds": 11.11,
+      "duration_readable": "11.11s",
+      "size_bytes": 177836,
+      "timestamp": "2026-05-02T17:03:45Z"
     }
   ]
 }
