@@ -4516,6 +4516,20 @@
       "duration_readable": "12.72s",
       "size_bytes": 203564,
       "timestamp": "2026-06-26T07:32:36Z"
+    },
+    {
+      "jobid": "mCloudTTS-8357",
+      "name": "mCloudTTS-8357_A_Pro_Level_Text_To_Speech_Tool_ff_siwis.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-8357_A_Pro_Level_Text_To_Speech_Tool_ff_siwis.mp3",
+      "title": "A Pro Level Text To Speech Tool (ff_siwis)",
+      "lang_code": "fr-fr",
+      "voice_id": "ff_siwis",
+      "gender": "Unknown",
+      "duration_seconds": 1122.38,
+      "duration_readable": "18.71m",
+      "size_bytes": 17958188,
+      "timestamp": "2026-09-20T22:30:53Z"
     }
   ]
 }
