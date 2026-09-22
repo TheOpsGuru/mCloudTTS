@@ -4530,6 +4530,20 @@
       "duration_readable": "18.71m",
       "size_bytes": 17958188,
       "timestamp": "2026-09-20T22:30:53Z"
+    },
+    {
+      "jobid": "mCloudTTS-1641",
+      "name": "mCloudTTS-1641_A_Pro_Level_Text_To_Speech_Tool_af_heart50_af_nicole50.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-1641_A_Pro_Level_Text_To_Speech_Tool_af_heart50_af_nicole50.mp3",
+      "title": "A Pro Level Text To Speech Tool (af_heart(50)+af_nicole(50))",
+      "lang_code": "en-us",
+      "voice_id": "af_heart(50)+af_nicole(50)",
+      "gender": "Female",
+      "duration_seconds": 13.13,
+      "duration_readable": "13.13s",
+      "size_bytes": 210092,
+      "timestamp": "2026-09-22T09:01:46Z"
     }
   ]
 }
