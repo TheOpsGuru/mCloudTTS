@@ -4572,6 +4572,20 @@
       "duration_readable": "28.24m",
       "size_bytes": 27110828,
       "timestamp": "2026-10-08T09:04:03Z"
+    },
+    {
+      "jobid": "mCloudTTS-1025",
+      "name": "mCloudTTS-1025_A_Pro_Level_Text_To_Speech_Tool_am_adam.mp3",
+      "project": "mCloudTTS",
+      "url": "https://github.com/TheOpsGuru/mCloudTTS/releases/download/mTTS/mCloudTTS-1025_A_Pro_Level_Text_To_Speech_Tool_am_adam.mp3",
+      "title": "A Pro Level Text To Speech Tool (am_adam)",
+      "lang_code": "en-us",
+      "voice_id": "am_adam",
+      "gender": "Male",
+      "duration_seconds": 1592.14,
+      "duration_readable": "26.54m",
+      "size_bytes": 25474220,
+      "timestamp": "2026-10-08T09:05:38Z"
     }
   ]
 }
